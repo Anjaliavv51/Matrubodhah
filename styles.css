@@ -30,9 +30,9 @@ nav {
 
 /* Align logo and Sanskrit text to the left */
 .logo {
-    font-size: 24px;
+    font-size: 40px;
     font-weight: bold;
-    color: #FB875C; /* Saffron color */
+    color: black; /* Saffron color */
     flex: 1;
     text-align: left; /* Align text to the left */
 }
@@ -129,7 +129,6 @@ nav {
     background-color: #FB875C; /* Saffron color */
     color: white;
     transform: scale(1.1); /* Zoom in effect on hover */
-    margin-left: 40px;
 }
 
 .hero {
@@ -141,41 +140,49 @@ nav {
     color: #044823; /* Adjust text color */
     width: 100%;
     height: 100vh; /* Full viewport height */
-    background: url('/DALL·E\ 2024-08-28\ 12.19.31\ -\ A\ clean\ and\ moderately\ detailed\ logo\ for\ a\ Sanskrit\ education\ website.\ T.webp') no-repeat center;
-    background-size: 51%; /* Size of the background image */
-    background-position: 95% 90%; /* Move the background image further to the right and lower it down */
+    background: url('/bgimg.jpg') no-repeat center;
+    background-size: 100%; /* Reduced the size of the background image to make space for the text */
+    background-position: 95% center; /* Move the background image further to the right */
     background-repeat: no-repeat; /* Prevents repeating of the image */
     padding: 0 5%; /* Adds horizontal padding */
-    padding-bottom: 50px; /* Add bottom padding to create a gap */
     box-sizing: border-box;
 }
 
-
 .hero h1 {
-    font-size: 48px;
+    
+    font-size: 70px;
     font-weight: bold;
-    color: #FB875C; /* Saffron color for heading */
-    margin-top: 150px; /* Add margin to position the text below the header */
-    margin-left: 140px;
+    color: white; /* Saffron color for heading */
+    margin-top: 180px; /* Add margin to position the text below the header */
+    margin-left: 550px;
 }
 
 .hero p {
     font-size: 18px;
     margin: 10px 0;
-    color: #FB875C;
-    font-weight: bolder;
+    color: white;
+    margin-left: 410px;
+}
+.hero h2{
+    font-size:25px;
+    margin-top: 0px;
+    color: white;
+    margin-left: 450px;
+    
 }
 
 .btn {
-    background-color: #FB875C; /* Saffron color */
-    color: white;
+    background-color: white; /* Saffron color */
+    color: black;
     padding: 10px 20px;
     text-decoration: none; /* Remove underline */
     border-radius: 0; /* Removed border radius */
     font-size: 18px;
     transition: background-color 0.3s ease;
     margin-top: 20px; /* Add margin to position the button below the text */
-    margin-left: 140px;
+    margin-left: 600px;
+    font-size: 30px;
+    margin-left: 550px;
 }
 
 
