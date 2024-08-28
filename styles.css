@@ -1,0 +1,196 @@
+/* General styling adjustments */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: #333;
+    box-sizing: border-box;
+    padding-top: 80px; /* This should be the same as the height of the header */
+}
+
+/* Header styling */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+/* Align logo and Sanskrit text to the left */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FB875C; /* Saffron color */
+    flex: 1;
+    text-align: left; /* Align text to the left */
+}
+
+/* Align navigation links to the right */
+.nav-links {
+    list-style: none; /* Removes bullet points from nav links */
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.nav-links li {
+    margin: 0 20px;
+    position: relative; /* For positioning the pseudo-element */
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: black;
+    font-weight: bold;
+    position: relative; /* For positioning the pseudo-element */
+    transition: color 0.3s ease; /* Color transition */
+}
+
+/* Adding underline animation effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Position underline slightly below the text */
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: #FB875C; /* Saffron color */
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #FB875C; /* Saffron color */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Underline grows to full width on hover */
+}
+
+/* Dropdown styling */
+.nav-links .dropdown {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    list-style: none; /* Removes bullet points from dropdown */
+    padding: 0; /* Removes default padding */
+}
+
+.nav-links .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Contact button styling */
+.btn-contact {
+    background-color: white;
+    color: black;
+    padding: 15px 30px; /* Increased padding for more space around text */
+    border: 3px solid #FB875C; /* Thicker border */
+    border-radius: 0; /* Removed border radius */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transform for zoom effect */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn-contact:hover {
+    background-color: #FB875C; /* Saffron color */
+    color: white;
+    transform: scale(1.1); /* Zoom in effect on hover */
+    margin-left: 40px;
+}
+
+.hero {
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: flex-start; /* Align content to the top */
+    flex-direction: column;
+    text-align: left; /* Align text to the left */
+    color: #044823; /* Adjust text color */
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background: url('/DALL·E\ 2024-08-28\ 12.19.31\ -\ A\ clean\ and\ moderately\ detailed\ logo\ for\ a\ Sanskrit\ education\ website.\ T.webp') no-repeat center;
+    background-size: 51%; /* Size of the background image */
+    background-position: 95% 90%; /* Move the background image further to the right and lower it down */
+    background-repeat: no-repeat; /* Prevents repeating of the image */
+    padding: 0 5%; /* Adds horizontal padding */
+    padding-bottom: 50px; /* Add bottom padding to create a gap */
+    box-sizing: border-box;
+}
+
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #FB875C; /* Saffron color for heading */
+    margin-top: 150px; /* Add margin to position the text below the header */
+    margin-left: 140px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #FB875C;
+    font-weight: bolder;
+}
+
+.btn {
+    background-color: #FB875C; /* Saffron color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none; /* Remove underline */
+    border-radius: 0; /* Removed border radius */
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add margin to position the button below the text */
+    margin-left: 140px;
+}
+
+
+
+.btn:hover {
+    background-color: #FB875C; /* Darker shade for hover effect */
+}
+
+/* Additional animation and icon styling */
+.icon {
+    color: #FB875C; /* Saffron color */
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.2); /* Animation on hover */
+}
+
