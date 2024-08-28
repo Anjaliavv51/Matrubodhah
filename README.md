@@ -92,7 +92,7 @@ It is an online platform which enables you to get eduction in cultural way.</p>
 
 <p style="font-family:var(--ff-philosopher);font-size:2rem;">We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's.
 
-To contribute to the Retro repository using GitHub Desktop, follow these steps:
+To contribute to the Matrubodhah repository using GitHub Desktop, follow these steps:
 
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Lady%20Beetle.png" width="20" height="20"> Reporting a bug<br>
 <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/tarikul-islam-anik/main/assets/images/Man%20Technologist%20Light%20Skin%20Tone.png" width="20" height="20" >Discussing the current state of the code<br>
