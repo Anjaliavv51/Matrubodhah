@@ -1,5 +1,5 @@
 # Matrubodhah
-Cultural Education.
+Cultural Education contents in Indian philosophy or spirituality related to maternal wisdom or understanding.
 
 <table align="center">
     <thead align="center">
