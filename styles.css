@@ -6,7 +6,6 @@ body {
     background-color: #fff;
     color: #333;
     box-sizing: border-box;
-    padding-top: 80px; /* This should be the same as the height of the header */
 }
 
 /* Header styling */
@@ -16,7 +15,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 1);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 10;
 }
@@ -28,60 +27,64 @@ nav {
     padding: 20px 5%;
 }
 
-/* Align logo and Sanskrit text to the left */
+/* Logo styling (now a clickable link) */
 .logo {
     font-size: 40px;
     font-weight: bold;
-    color: black; /* Saffron color */
+    color: black;
     flex: 1;
-    text-align: left; /* Align text to the left */
+    text-align: left;
+    text-decoration: none; /* Remove underline from the logo link */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: color 0.3s ease;
 }
 
-/* Align navigation links to the right */
+.logo:hover {
+    color: rgb(106, 97, 97); /* Change color on hover */
+}
+
 .nav-links {
-    list-style: none; /* Removes bullet points from nav links */
+    list-style: none;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     flex: 1;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end;
 }
 
 .nav-links li {
     margin: 0 20px;
-    position: relative; /* For positioning the pseudo-element */
+    position: relative;
 }
 
 .nav-links a {
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
     color: black;
     font-weight: bold;
-    position: relative; /* For positioning the pseudo-element */
-    transition: color 0.3s ease; /* Color transition */
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-/* Adding underline animation effect */
 .nav-links a::after {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -3px; /* Position underline slightly below the text */
+    bottom: -3px;
     width: 0;
-    height: 2px; /* Thickness of the underline */
-    background-color: #FB875C; /* Saffron color */
+    height: 2px;
+    background-color: black;
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #FB875C; /* Saffron color */
+    color: black;
 }
 
 .nav-links a:hover::after {
-    width: 100%; /* Underline grows to full width on hover */
+    width: 100%;
 }
 
-/* Dropdown styling */
 .nav-links .dropdown {
     position: relative;
 }
@@ -93,8 +96,8 @@ nav {
     min-width: 160px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    list-style: none; /* Removes bullet points from dropdown */
-    padding: 0; /* Removes default padding */
+    list-style: none;
+    padding: 0;
 }
 
 .nav-links .dropdown-content a {
@@ -112,92 +115,145 @@ nav {
     background-color: #f1f1f1;
 }
 
-/* Contact button styling */
 .btn-contact {
     background-color: white;
     color: black;
-    padding: 15px 30px; /* Increased padding for more space around text */
-    border: 3px solid #FB875C; /* Thicker border */
-    border-radius: 0; /* Removed border radius */
+    padding: 15px 30px;
+    border: 3px solid black;
+    border-radius: 0;
     font-size: 16px;
     font-weight: bold;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Added transform for zoom effect */
-    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
 }
 
 .btn-contact:hover {
-    background-color: #FB875C; /* Saffron color */
+    background-color: black;
     color: white;
-    transform: scale(1.1); /* Zoom in effect on hover */
+    transform: scale(1.1);
 }
 
+/* Hero Section */
 .hero {
     display: flex;
-    justify-content: flex-start; /* Align content to the left */
-    align-items: flex-start; /* Align content to the top */
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    text-align: left; /* Align text to the left */
-    color: #044823; /* Adjust text color */
+    text-align: center;
+    color: #044823;
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     background: url('/bgimg.jpg') no-repeat center;
-    background-size: 100%; /* Reduced the size of the background image to make space for the text */
-    background-position: 95% center; /* Move the background image further to the right */
-    background-repeat: no-repeat; /* Prevents repeating of the image */
-    padding: 0 5%; /* Adds horizontal padding */
+    background-size: cover;
+    background-position: center;
+    padding: 0 5%;
     box-sizing: border-box;
+    margin-top: 80px;
+    position: relative;
+    z-index: 1;
+    background-color: white;
 }
 
 .hero h1 {
-    
     font-size: 70px;
     font-weight: bold;
-    color: white; /* Saffron color for heading */
-    margin-top: 180px; /* Add margin to position the text below the header */
-    margin-left: 550px;
+    color: white;
+    margin-top: 0;
 }
 
 .hero p {
     font-size: 18px;
     margin: 10px 0;
     color: white;
-    margin-left: 410px;
 }
-.hero h2{
-    font-size:25px;
-    margin-top: 0px;
+
+.hero h2 {
+    font-size: 25px;
     color: white;
-    margin-left: 450px;
-    
 }
 
 .btn {
-    background-color: white; /* Saffron color */
+    background-color: white;
     color: black;
     padding: 10px 20px;
-    text-decoration: none; /* Remove underline */
-    border-radius: 0; /* Removed border radius */
+    text-decoration: none;
+    border-radius: 0;
     font-size: 18px;
     transition: background-color 0.3s ease;
-    margin-top: 20px; /* Add margin to position the button below the text */
-    margin-left: 600px;
+    margin-top: 20px;
     font-size: 30px;
-    margin-left: 550px;
 }
-
-
 
 .btn:hover {
-    background-color: #FB875C; /* Darker shade for hover effect */
+    background-color: black;
+    color: white;
 }
 
-/* Additional animation and icon styling */
-.icon {
-    color: #FB875C; /* Saffron color */
-    transition: transform 0.3s ease;
+/* Wisdom Section */
+.wisdom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 5%;
+    box-sizing: border-box;
+    background-color: white;
+    margin-top: 50px;
 }
 
-.icon:hover {
-    transform: scale(1.2); /* Animation on hover */
+.wisdom-content {
+    flex: 1;
+    padding-right: 20px;
+    margin-left: 8%;
+    margin-right: 5%;
 }
 
+.wisdom-content h1 {
+    font-size: 46px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.wisdom-content h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.wisdom-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.wisdom-content .btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 0;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.wisdom-content .btn:hover {
+    background-color: rgb(160, 158, 158);
+    color: black;
+    transform: scale(1.1);
+    width: 100%;
+}
+
+.wisdom-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    margin-right: 8%;
+}
+
+.wisdom-image img {
+    max-width: 100%;
+    height: auto;
+}
