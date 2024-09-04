@@ -1,3 +1,6 @@
+*{
+    oveflow:hidden;
+}
 /* Initial state for Hero and Wisdom sections */
 .hero,
 .wisdom-section .wisdom-content {
