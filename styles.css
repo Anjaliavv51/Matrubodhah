@@ -73,12 +73,12 @@ nav {
     bottom: -3px;
     width: 0;
     height: 2px;
-    background-color: black;
+    background-color: #E5A186;
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: black;
+    color: #E5A186;
 }
 
 .nav-links a:hover::after {
@@ -225,24 +225,17 @@ nav {
     margin-bottom: 20px;
 }
 
-.wisdom-content .btn {
-    background-color: white;
+.wisdom-content .bt {
     color: black;
-    padding: 10px 20px;
     text-decoration: none;
     border-radius: 0;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
     margin-top: 10px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.wisdom-content .btn:hover {
-    background-color: rgb(160, 158, 158);
-    color: black;
-    transform: scale(1.1);
-    width: 100%;
+.wisdom-content .bt:hover {
+    border: #E5A186 10px;
 }
 
 .wisdom-image {

@@ -16,6 +16,11 @@
     animation: bounce 0.5s ease infinite alternate;
     transform-origin: center bottom;
   }
+  .wisdom-image img:is(:hover,:focus) {
+    box-shadow: 
+        20px 20px 0 0 #E5A186,
+        40px 40px 0 0 #f8bea7;
+  }
   
   @keyframes bounce {
     from {
