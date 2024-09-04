@@ -225,7 +225,7 @@ nav {
     margin-bottom: 20px;
 }
 
-.wisdom-content .bt {
+.wisdom-content a {
     color: black;
     text-decoration: none;
     border-radius: 0;
@@ -233,9 +233,22 @@ nav {
     font-size: 25px;
     font-weight: bold;
 }
-
-.wisdom-content .bt:hover {
-    border: #E5A186 10px;
+.bt::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #E5A186;
+    transition: width 0.3s ease;
+}
+.bt:hover {
+  color: #E5A186;
+}
+  
+.bt:hover::after {
+  width: 28%;
 }
 
 .wisdom-image {
