@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>मातृबोधः</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
     <style>
         /* Enable smooth scrolling */
         html {
@@ -35,7 +36,9 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <h1>मातृबोधः</h1>
+        <h1 class="wave-text">
+            <span>मा</span><span>तृ</span><span>बो</span><span>धः</span>
+        </h1>
         <h2>योगस्थः कुरु कर्माणि सङ्गं त्यक्त्वा धनञ्जय।</h2>
         <p class="subtitle">A Chariot of Indian Youth with Ancient Wisdom for Modern Problems</p>
         <a href="#" class="btn">View Services</a>
@@ -53,6 +56,37 @@
             <img src="/1.jpg" alt="Krishna and Arjuna on chariot">
         </div>
     </section>
-    
+
+    <script>
+        document.addEventListener("scroll", function() {
+            const heroSection = document.querySelector(".hero");
+            const heroH2 = document.querySelector(".hero h2");
+            const heroP = document.querySelector(".hero p.subtitle");
+            const wisdomContent = document.querySelector(".wisdom-section .wisdom-content");
+            const wisdomImage = document.querySelector(".wisdom-image");
+
+            const scrollPosition = window.scrollY + window.innerHeight;
+
+            // Check if the user has scrolled to the hero section and apply/remove the scrolled class
+            if (scrollPosition > heroSection.offsetTop + heroSection.offsetHeight / 3) {
+                heroSection.classList.add("scrolled");
+                heroH2.classList.add("scrolled");
+                heroP.classList.add("scrolled");
+            } else {
+                heroSection.classList.remove("scrolled");
+                heroH2.classList.remove("scrolled");
+                heroP.classList.remove("scrolled");
+            }
+
+            // Check if the user has scrolled to the wisdom section content and apply/remove the scrolled class
+            if (scrollPosition > wisdomContent.offsetTop + wisdomContent.offsetHeight / 3) {
+                wisdomContent.classList.add("scrolled");
+                wisdomImage.classList.add("scrolled");
+            } else {
+                wisdomContent.classList.remove("scrolled");
+                wisdomImage.classList.remove("scrolled");
+            }
+        });
+    </script>
 </body>
 </html>
