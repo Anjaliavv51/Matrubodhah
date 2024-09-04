@@ -7,7 +7,9 @@ body {
     color: #333;
     box-sizing: border-box;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* Header styling */
 header {
     width: 100%;

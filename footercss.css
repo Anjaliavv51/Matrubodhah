@@ -1,0 +1,19 @@
+.footer{
+    background-color: rgba(74, 72, 72, 0);
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color: #e5a186;
+}
+.heart {
+    color: #ff4081;
+    display: inline-block;
+    animation: beat 1s ease infinite;
+}
+
+@keyframes beat {
+    0%, 50%, 100% { transform: scale(1); }
+    25%, 75% { transform: scale(1.2); }
+}
