@@ -127,8 +127,9 @@ nav {
     text-decoration: none;
 }
 
-.btn-contact:hover {
-    background-color: black;
+.btn-contact:is(:focus,:hover) {
+    background-color: #E5A186;
+    border-color: #E5A186;
     color: white;
     transform: scale(1.1);
 }
@@ -136,22 +137,15 @@ nav {
 /* Hero Section */
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: #044823;
-    width: 100%;
     height: 100vh;
-    background: url('/bgd img.jpg') no-repeat center;
-    background-size: cover;
-    background-position: center;
     padding: 0 5%;
-    box-sizing: border-box;
     margin-top: 80px;
+    background: url('/bgd img.jpg') no-repeat center/cover;
     position: relative;
     z-index: 1;
-    background-color: white;
 }
 
 .hero h1 {
@@ -181,15 +175,16 @@ nav {
     color: black;
     padding: 10px 20px;
     text-decoration: none;
-    border-radius: 0;
     font-size: 18px;
     transition: background-color 0.3s ease;
     margin-top: 20px;
     font-size: 30px;
 }
 
-.btn:hover {
-    background-color: black;
+.btn:is(:focus,:hover) {
+    background-color: #E5A186;
+    border-radius: #E5A186;
+    padding: 20px 30px;
     color: white;
 }
 
@@ -260,4 +255,5 @@ nav {
 .wisdom-image img {
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
 }

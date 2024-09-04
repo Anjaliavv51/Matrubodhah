@@ -6,6 +6,7 @@
     <title>मातृबोधः</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
     <style>
         /* Enable smooth scrolling */
         html {
@@ -56,37 +57,16 @@
             <img src="/1.jpg" alt="Krishna and Arjuna on chariot">
         </div>
     </section>
-
-    <script>
-        document.addEventListener("scroll", function() {
-            const heroSection = document.querySelector(".hero");
-            const heroH2 = document.querySelector(".hero h2");
-            const heroP = document.querySelector(".hero p.subtitle");
-            const wisdomContent = document.querySelector(".wisdom-section .wisdom-content");
-            const wisdomImage = document.querySelector(".wisdom-image");
-
-            const scrollPosition = window.scrollY + window.innerHeight;
-
-            // Check if the user has scrolled to the hero section and apply/remove the scrolled class
-            if (scrollPosition > heroSection.offsetTop + heroSection.offsetHeight / 3) {
-                heroSection.classList.add("scrolled");
-                heroH2.classList.add("scrolled");
-                heroP.classList.add("scrolled");
-            } else {
-                heroSection.classList.remove("scrolled");
-                heroH2.classList.remove("scrolled");
-                heroP.classList.remove("scrolled");
-            }
-
-            // Check if the user has scrolled to the wisdom section content and apply/remove the scrolled class
-            if (scrollPosition > wisdomContent.offsetTop + wisdomContent.offsetHeight / 3) {
-                wisdomContent.classList.add("scrolled");
-                wisdomImage.classList.add("scrolled");
-            } else {
-                wisdomContent.classList.remove("scrolled");
-                wisdomImage.classList.remove("scrolled");
-            }
-        });
-    </script>
+    <section class="content-section" id="content">
+        <!-- Roadmap Cards -->
+        <div class="roadmap">
+            <div class="roadmap-card">Milestone 1</div>
+            <div class="roadmap-card">Milestone 2</div>
+            <div class="roadmap-card">Milestone 3</div>
+            <div class="roadmap-card">Milestone 4</div>
+            <div class="roadmap-card">Milestone 5</div>
+        </div>
+    </section>
+    <script src="scrollscript.js"></script>
 </body>
 </html>

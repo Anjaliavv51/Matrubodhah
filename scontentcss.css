@@ -1,0 +1,46 @@
+
+/*Section-content*/
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 5%;
+    box-sizing: border-box;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.roadmap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0px auto 100px;
+}
+
+.roadmap-card {
+    background-color: #fff;
+    padding: 100px;
+    border-radius: 8px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+/* Positioning odd cards on the left */
+.roadmap-card:nth-child(odd) {
+    align-self: flex-start;
+    transform: translateX(-300px) translateY(50px);
+}
+
+/* Positioning even cards on the right */
+.roadmap-card:nth-child(even) {
+    align-self: flex-end;
+    transform: translateX(300px) translateY(50px);
+}
+
+/* Active class to trigger the animation */
+.roadmap-card.active {
+    opacity: 1;
+    transform: translateY(0) translateX(0);
+}
