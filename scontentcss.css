@@ -27,6 +27,10 @@
     transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
+.roadmap-card:is(:focus,:hover){
+    background-color: #E5A186;
+    padding: 150px;
+}
 /* Positioning odd cards on the left */
 .roadmap-card:nth-child(odd) {
     align-self: flex-start;
