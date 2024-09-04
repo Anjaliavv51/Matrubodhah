@@ -52,7 +52,10 @@
     transform-origin: bottom center;
     margin: 0 2px;
 }
-
+#audio-icon{
+  height: 50px;
+  width: 50px;
+}
 /* Keyframes for the wave effect */
 @keyframes wave {
     0%, 100% { transform: translateY(0); }
