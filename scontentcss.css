@@ -1,54 +1,46 @@
 .content-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 50px 5%;
-    box-sizing: border-box;
-    background-color: white;
-    margin-top: 50px;
+    padding: 2rem;
 }
 
 .roadmap {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
-    margin: 0px auto 100px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .roadmap-card {
     background-color: #fff;
     border-radius: 8px;
-    color: black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(50px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    padding: 1rem;
+    width: 500px;
+    transition: all 0.3s ease;
 }
-.roadmap-card:is(:focus,:hover){
-    box-shadow: 
-        20px 20px 0 0 #efbca8,
-        40px 40px 0 0 #E5A186;
-    transition: box-shadow 0.3s ease-in-out;
+
+.roadmap-card img {
+    width: 50%;
+    height: 30%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
 }
-/* Positioning odd cards on the left and right*/
-.roadmap-card:nth-child(odd) {
-    align-self: flex-start;
-    transform: translateX(-300px) translateY(50px);
+
+.roadmap-card h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
 }
-.roadmap-card:nth-child(even) {
-    align-self: flex-end;
-    transform: translateX(300px) translateY(50px);
+
+.roadmap-card p {
+    font-size: 1rem;
+    line-height: 1.5;
 }
-/*Size of img*/
-.roadmap-card img{
-    width: 300px;
-    height: 300px;
-    border-radius: 8px 8px 0px 0px;
-}
-.roadmap-card.active {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-}
-.roadmap-card p{
-    margin: 10px 10px 10px 10px;
+
+.roadmap-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px #f8bea7;
 }
