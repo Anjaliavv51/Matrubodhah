@@ -47,6 +47,13 @@
             align-items: center;
             justify-content: center;
         }
+        .wrapper1{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
         .container{
             height: 400px;
             display: flex;
@@ -62,6 +69,7 @@
             border-radius: 2rem;
             margin: 0 10px;
             display: flex;
+            flex-direction: row;
             align-items: flex-end;
             transition: .6s cubic-bezier(.28,-0.03,0,.99);
             box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
@@ -86,12 +94,6 @@
         }
         input:checked+label{
             width: 700px;
-            .row{
-                display: none;
-            }
-            .icon{
-                display: none;
-            }
         }
         input:checked+label .description{
             opacity: 1 !important;
@@ -195,7 +197,7 @@
                     <div class="icon">2</div>
                 </div>
             </label>
-            <input type="radio" name="slide" id="c3">
+            <input type="radio" name="slide" id="c3" checked>
             <label for="c3" class="card">
                 <div class="row">
                     <div class="icon">3</div>
@@ -213,6 +215,10 @@
                     <div class="icon">5</div>
                 </div>
             </label>
+        </div>
+    </div>
+    <div class="wrapper1">
+        <div class="container">
             <input type="radio" name="slide" id="c6">
             <label for="c6" class="card">
                 <div class="row">
