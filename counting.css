@@ -1,19 +1,21 @@
-
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    color: black;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
 }
 .game-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 600px;
-    margin-bottom: 300px;
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
 .lotus {
     width: 100px;
@@ -32,7 +34,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
 }
-.blast {
+.counting {
     position: fixed;
     top: 0;
     left: 0;
@@ -48,7 +50,7 @@ body {
     pointer-events: none;
     transition: opacity 0.3s ease;
 }
-.blast.show {
+.counting.show {
     opacity: 1;
     pointer-events: auto;
 }

@@ -145,7 +145,7 @@ nav {
     height: 100vh;
     padding: 0 5%;
     margin-top: 80px;
-    background: url('/bgd img.jpg') no-repeat center/cover;
+    background: url('/image.png') no-repeat center/cover;
     position: relative;
     z-index: 1;
 }
