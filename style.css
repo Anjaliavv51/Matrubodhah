@@ -115,8 +115,8 @@ button.ghost{
     z-index: 100;
 }
 .overlay{
-    background: #ff416c;
-    background: linear-gradient(to right,#ff4b2b,#ff416c) no-repeat 0 0 / cover;
+    background: #ff4b2b;
+    background: linear-gradient(to right,#fe6a4f,#ff4a2b) no-repeat 0 0 / cover;
     color: #fff;
     position: relative;
     left: -100%;
