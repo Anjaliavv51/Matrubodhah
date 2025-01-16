@@ -1,111 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <link
       rel="icon"
       href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp"
     />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login and Signup Form</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="scontentcss.css">
-    <link rel="stylesheet" href="footercss.css">
-    <link rel="stylesheet" href="counting.css">
-    <!-- Font Awesome CDN link --> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="scontentcss.css" />
+    <link rel="stylesheet" href="footercss.css" />
+    <link rel="stylesheet" href="counting.css" />
+    <!-- Font Awesome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header>
-        <nav>
-            <!-- Wrap the logo text in an anchor tag -->
-            <a href="#hero" class="logo">मातृबोधः</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#wisdom">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Content</a>
-                    <ul class="dropdown-content">
-                        <li><a href="countingpage.html">Counting</a></li>
-                        <li><a href="#">Days</a></li>
-                        <li><a href="#">Activities</a></li>
-                    </ul>
-                </li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="#" >Contact</a></li>
+      <nav>
+        <!-- Wrap the logo text in an anchor tag -->
+        <a href="#hero" class="logo">मातृबोधः</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#wisdom">About</a></li>
+          <li class="dropdown">
+            <a href="#">Content</a>
+            <ul class="dropdown-content">
+              <li><a href="countingpage.html">Counting</a></li>
+              <li><a href="#">Days</a></li>
+              <li><a href="#">Activities</a></li>
             </ul>
-            <div class="toggle-menu">☰</div>
-        </nav>
+          </li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+        <div class="toggle-menu">☰</div>
+      </nav>
     </header>
     <div class="container" id="container">
-        <div class="form-container sign-up-container">
-            <form action="#">
-                <h1>Create Account</h1>
-                
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <p>By creating account, you agree with the <a href="terms.html" class="click">Terms and conditions</a></p>
-                <button>Sign Up</button>
+      <div class="form-container sign-up-container">
+        <form action="#">
+          <h1>Create Account</h1>
 
-            </form>
+          <input type="text" placeholder="Name" />
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <p>
+            By creating account, you agree with the
+            <a href="terms.html" class="click">Terms and conditions</a>
+          </p>
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form action="#">
+          <h1>Sign In</h1>
 
+          <input type="email" placeholder="Email" />
+          <input type="password" placeholder="Password" />
+          <a href="#"
+            >Forgot your password?<span class="click">Click here</span></a
+          >
+          <button>Sign In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Sign In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
         </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <h1>Sign In</h1>
-                
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <a href="#">Forgot your password?<span class="click">Click here</span></a>
-                <button>Sign In</button>
-            </form>
-
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <h1>Welcome Back!</h1>
-                    <p>
-                        To keep connected with us please login with your personal info
-                    </p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Enter your personal details and start journey with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-
-                </div>
-            </div>
-
-        </div>
-
+      </div>
     </div>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="login.js"></script>
 
     <script>
-        
-const signUpButton = document.getElementById('signUp');
-const signInButton = document.getElementById('signIn');
-const container = document.getElementById('container');
+      const signUpButton = document.getElementById("signUp");
+      const signInButton = document.getElementById("signIn");
+      const container = document.getElementById("container");
 
-signUpButton.addEventListener('click',()=>
-    container.classList.add('right-panel-active')
-);
-signInButton.addEventListener('click',()=>
-    container.classList.remove('right-panel-active')
-);
-
+      signUpButton.addEventListener("click", () =>
+        container.classList.add("right-panel-active")
+      );
+      signInButton.addEventListener("click", () =>
+        container.classList.remove("right-panel-active")
+      );
     </script>
-     <div class="footer">
-    Made with ❤️ by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a>
-</div>
+    <div class="footer">
+      Made with ❤️ by
+      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
+        >@Sakthi</a
+      >
+    </div>
 
     <script src="scrollscript.js"></script>
     <script src="audio.js"></script>
     <script src="index.js"></script>
-</body>
+  </body>
 </html>

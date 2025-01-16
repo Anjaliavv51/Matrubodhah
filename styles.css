@@ -570,3 +570,14 @@ nav {
     margin-right: 3%;
   }
 }
+
+
+#cursor{
+  height:20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: rgb(17, 17, 17, 0.8);
+  position: fixed;
+  z-index: 11;
+
+}
