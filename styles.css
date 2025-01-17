@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@ body {
   color: #333;
   box-sizing: border-box;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -52,12 +54,6 @@ nav {
   padding: 0;
   flex: 1;
   justify-content: flex-end;
-}
-
-@media screen and (max-width: 768px) {
-  .nav-links {
-    flex-direction: column;
-  }
 }
 
 .nav-links li {
@@ -122,323 +118,49 @@ nav {
   background-color: #f1f1f1;
 }
 
-
-
 .btn-contact:is(:focus, :hover) {
   background-color: #e5a186;
   border-color: #e5a186;
   color: white;
   transform: scale(1.1);
 }
-@media (max-width: 768px) {
-    .navbar-collapse {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        font-size: 24px;
-        margin-left: auto;
-    }
-
-    .btn-contact {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-        width: 100%;
-    }
-}
 
 /* Hide the menu toggle button by default */
 .menu-toggle {
-    display: none;
-}
-
-
-
-/* Hero Section */
-.hero {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0 5%;
-  margin-top: 80px; */
-  /* background: url("/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg")
-    no-repeat center/cover; */
-  /* position: relative;
-  z-index: 1; */
-}
-
-.hero h1 {
-  font-size: 70px;
-  font-weight: bold;
-  color: white;
-  margin-top: 0;
-}
-
-.hero p {
-  font-size: 18px;
-  margin: 10px 0;
-  color: white;
-  font-weight: bold;
-}
-
-.hero h2 {
-  font-size: 25px;
-  color: white;
-  font-weight: bolder;
-}
-
-.btn {
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-  margin-top: 20px;
-  font-size: 30px;
-}
-
-.btn:is(:focus, :hover) {
-  background-color: #e5a186;
-  border-radius: #e5a186;
-  color: white;
-}
-
-/* Wisdom Section */
-.wisdom-section {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 50px 5%;
-  box-sizing: border-box;
-  background-color: white;
-  margin-top: 50px;
-}
-
-.wisdom-content {
-  flex: 1;
-  padding-right: 20px;
-  margin-left: 8%;
-  margin-right: 5%;
-}
-
-.wisdom-content h1 {
-  font-size: 46px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.wisdom-content h2 {
-  font-size: 36px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.wisdom-content p {
-  font-size: 18px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.wisdom-content a {
-  color: black;
-  text-decoration: none;
-  border-radius: 0;
-  margin-top: 10px;
-  font-size: 25px;
-  font-weight: bold;
-}
-.bt::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: #e5a186;
-  transition: width 0.3s ease;
-}
-.bt:hover {
-  color: #e5a186;
-}
-
-.bt:hover::after {
-  width: 28%;
-}
-
-.wisdom-image {
-  flex: 1;
-  max-width: 50%;
-  text-align: right;
-  margin-right: 8%;
-}
-
-.wisdom-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-/* Adjust carousel image height */
-.hero-duplicate{
-     /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 5%;
-    margin-top: 80px; 
-    /* background: url('/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg') no-repeat center/cover; */
-    /* z-index: 1;  */
-
-}
-.carousel-item{
-    position: relative;
-     display: flex;
-    flex-wrap: wrap; /* Allow wrapping */
-    justify-content: center; /* Center content */
-    align-items: center; /* Align items */
-    height: auto; /* Allow height to adjust */
-    
-
-}
-.carousel-item img {
-    max-width: 100%;
-    height: 100vh; /* Makes the images cover the entire viewport height */
-    object-fit: cover; /* Ensures images scale properly without distortion */
-    margin: 0;
-    padding: 0;
-}
-
-/* Center carousel text */
-.carousel_caption {
-    position: absolute;
-    /* right: 15%;
-    bottom: 40%;
-    left: 15%; */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    color: #fff;
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5); /*Semi-transparent background for better readability */
-    border-radius: 10px;
-}
-
-/* Style for the heading text */
-.carousel_caption h1 {
-    font-size: 4rem;
-    font-weight: bold;
-    color: white;
-    margin-top: 0;
-    word-wrap: break-word;
-}
-
-/* Subtitle styling */
-.carousel_caption h2 {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bolder;
-    word-wrap: break-word;
-    
-}
-
-/* Button styling */
-.carousel_caption .btn {
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
-    font-size: 30px;
-}
-
-.carousel_caption .btn:is(:hover, :focus) {
-  background-color: #E5A186;
-    border-radius: #E5A186;
-    color: white;
-}
-
-@media (max-width: 992px) and (min-width: 768px) {
-    .carousel_caption {
-        top: 70%; /* Push it lower to avoid navbar overlap */
-    }
+  display: none;
 }
 
 @media (max-width: 768px) {
-    .carousel_caption {
-       top: 60%;
-       padding: 5px;
-    }
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .carousel_caption h1 {
-        font-size: 2rem; /* Smaller text for smaller screens */
-    }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
 
-    .carousel_caption h2 {
-        font-size: 1rem;
-    }
+  .nav-links.active {
+    display: flex;
+  }
 
-    .carousel_caption p.subtitle {
-        font-size: 0.875rem;
-    }
+  .menu-toggle {
+    display: block;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: auto;
+  }
 
-    .carousel_caption .btn {
-        font-size: 0.875rem;
-        padding: 8px 15px;
-    }
-}
-
-@media (max-width: 576px) {
-    .carousel_caption {
-        top: 60%;
-        padding: 5px;
-    }
-
-    .carousel_caption h1 {
-        font-size: 1rem; /* Smaller text for smaller screens */
-    }
-
-    .carousel_caption h2 {
-        font-size: 0.7rem;
-    }
-
-    .carousel_caption p.subtitle {
-        font-size: 0.5rem;
-    }
-
-    .carousel_caption .btn {
-        font-size: 0.75rem;
-        padding: 6px 12px;
-    }
-}
-
-.toggle-menu {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+  .btn-contact {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -546,27 +268,106 @@ nav {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .hero h1 {
-    font-size: 32px;
+/* Contact Form */
+.contact-form {
+  background: white;
+  width: 90%;
+  max-width: 700px;
+  padding: 20px;
+  margin-left:  auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1 {
+  text-align: center;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.contact-form textarea{
+  width: 100%;
+  height: 20vh;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: #e5a186;
+}
+
+.contact-form button {
+  background-color: #e5a186;
+  color: white;
+  border: none;
+  font-size: 20px;
+  width: 100%;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #f6a07e;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .contact-form {
+    width: 90%;
+    margin-top: 20px;
   }
 
-  .wisdom-content h1 {
-    font-size: 28px;
+  .contact-form h1 {
+    font-size: 24px;
   }
 
-  .wisdom-content h2 {
-    font-size: 20px;
+  .contact-form button {
+    font-size: 18px;
+  }
+
+  .contact-form textarea {
+    height: 100px;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .wisdom-section {
-    padding: 40px 3%;
+@media (max-width: 480px) {
+  .contact-form {
+    width: 100%;
+    padding: 10px;
   }
 
-  .wisdom-content {
-    margin-left: 3%;
-    margin-right: 3%;
+  .contact-form h1 {
+    font-size: 20px;
+  }
+
+  .contact-form button {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+
+  .contact-form textarea {
+    height: 80px;
   }
 }
