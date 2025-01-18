@@ -126,7 +126,7 @@ nav {
 }
 
 /* Hide the menu toggle button by default */
-.menu-toggle {
+.toggle-menu {
   display: none;
 }
 
