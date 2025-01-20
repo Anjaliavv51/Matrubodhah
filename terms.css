@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #FF7F50;
+    --secondary-color: #FFA07A;
+    --text-color: #333;
+    --background-color: #FFF5EE;
+    --accent-color: #8B4513;
+    --highlight-color: #FFD700;
+}
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px 20px;
+}
+
+h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+h3 {
+    color: var(--accent-color);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.highlight {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .section {
+        padding: 15px;
+    }
+}
+.section p,li{
+    font-size: small;
+}
+.footer {
+    
+    font-size: 0.8rem;
+    color: #636363;
+    text-align: center;
+    
+    bottom: 10px;
+    width: 100%;
+}
