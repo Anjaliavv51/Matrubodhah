@@ -1,93 +1,120 @@
+
+/* ========================
+   Footer Section
+   ======================== */
 .main-footer {
-    background-color: #f8f8f8;
-    padding: 4rem 5%;
-    color: #333;
-    font-family: 'Arial', sans-serif;
-    border-top: 3px solid #E5A186;
+  background-color: #f8f8f8;
+  padding: 4rem 5%;
+  color: #333;
+  font-family: 'Arial', sans-serif;
+  border-top: 3px solid #E5A186;
+   border-top-left-radius: 50px;
+   border-top-right-radius: 50px;
 }
 
 .footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
 }
 
 .footer-section h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #000;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 .footer-section h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #000;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000;
 }
 
 .footer-section p {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-    letter-spacing: 0.2px;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  letter-spacing: 0.2px;
 }
 
 .footer-section ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .footer-section ul li {
-    margin-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
 }
 
 .footer-section ul li a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #E5A186;
+  color: #E5A186;
 }
 
 .social-links {
-    display: flex;
-    justify-content: flex-start; 
-    align-items: center;
-    gap: 20px;
-    margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-top: 1rem;
 }
 
 .social-links a {
-    color: #333; 
-    font-size: 1.5rem;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
-    transition: all 0.3s ease;
+  color: #333;
+  font-size: 1.5rem;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.social-links a:hover {
-    color: #E5A186;
-    text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+.social-links a[aria-label="Facebook"]:hover {
+  color: #3b5998;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a[aria-label="Twitter"]:hover {
+  color: #1da1f2;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a[aria-label="Instagram"]:hover {
+  color: #e4405f;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a[aria-label="YouTube"]:hover {
+  color: #ff0000;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.social-links a[aria-label="Linkedin"]:hover {
+  color: #0077b5;
+  text-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 .contact-info li {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
-    gap: 0.6rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  gap: 0.6rem;
 }
 
 .contact-info li span {
-    margin-left: 0.3rem;
-    transition: all 0.3s ease;
+  margin-left: 0.3rem;
+  transition: all 0.3s ease;
 }
 
 .contact-info li span:hover {
-    color: #E5A186;
+  color: #E5A186;
 }
+
 .footer-bottom {
     text-align: center;
-    padding-top: 2rem;
+    padding-top: 0.5rem;
     border-top: 1px solid #ddd;
     font-size: 0.9rem;
 }
@@ -109,75 +136,125 @@
         transform: scale(1.2);
     }
 }
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
-    .footer-content {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
-
-    .footer-section ul li {
-        margin-bottom: 0.6rem;
-    }
-
-    .social-links a {
-        font-size: 1.4rem;
-    }
+form {
+   padding-bottom: 199px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   position: relative;  /* Add relative positioning to the form */
+   margin-bottom: 1px;
 }
 
-@media (max-width: 768px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .footer-section {
-        text-align: center;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .contact-info li {
-        justify-content: center;
-    }
-        
-    .contact-info li span {
-        margin-left: 0rem;
-    }
-    
-    .footer-section h3 {
-        font-size: 1.8rem;
-    }
-
-    .footer-section h4 {
-        font-size: 1rem;
-    }
+form::before {
+   content: "";
+   position: absolute;
+   bottom: 0;
+   left: 0%;  /* Adjust this value to control the starting point of the border */
+   width: 92%;  /* Adjust this value to control the length of the border */
+   border-bottom: 1px solid #333;  /* border color */
 }
 
-@media (max-width: 480px) {
-    .main-footer {
-        padding: 3rem 3%;
-    }
-
-    .footer-section h3 {
-        font-size: 1.6rem;
-    }
-
-    .footer-section h4 {
-        font-size: 0.9rem; 
-    }
-
-    .footer-section ul li a {
-        font-size: 0.9rem; 
-    }
-
-    .social-links a {
-        font-size: 1.2rem; 
-    }
-        
-    .footer-bottom {
-        font-size: 0.8rem; 
-    }
+form input{
+   width:85%;
+   padding: 5px;
+   background: transparent;
+   color: #333;
+   border: 0;
+   outline: none;
 }
+form button{
+   background: transparent;
+   border: 0;
+   outline: none;
+   cursor: pointer;
+}
+form button .fas{
+  font-size: 16px;
+  padding: 10px 20px;
+  color: #333;
+}
+
+.main-footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.main-footer .footer-section {
+  flex: 1 1 18%; /* This ensures each section takes up an equal width, you can adjust percentage as needed */
+  padding: 10px;
+}
+
+.main-footer .footer-section h4 {
+  margin-bottom: 10px;
+}
+
+.main-footer .footer-section ul,
+.main-footer .footer-section form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-footer .footer-section form input {
+  margin-right: 10px;
+}
+
+h4 {
+  position: relative; /* Add relative positioning to the <h3> element */
+}
+
+.underline {
+  width: 45%; /* Adjusted to make the red line shorter */
+  height: 3px;
+  background: #e9beba;
+  border-radius: 3px;
+  position: absolute;
+  bottom: -8px; /* Adjusted to position the underline correctly below the text */
+  left: 10%; /* Centers the underline horizontally */
+  transform: translateX(-20%); /* This ensures that the underline is centered */
+  overflow: hidden;
+}
+
+.underline span {
+  width: 15px;
+  height: 100%;
+  background: #d25523;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: -15px; /* Starting off-screen to the left */
+  animation: moving 2s linear infinite;
+}
+
+@keyframes moving {
+  0% {
+    left: -20px; /* Start animation off-screen */
+  }
+  100% {
+    left: 100%; /* Move the span across to the right */
+  }
+}
+
+.github-star a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #5592ed 0%, #ec8926 100%);
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    box-shadow: 0px 4px 15px rgb(217 89 14 / 81%);
+  }
+
+  .github-star a:hover {
+    background: linear-gradient(90deg, #ec8926 0%, #2196F3 100%);
+    box-shadow: 0px 6px 20px #F44336;
+  }
+
+  .github-star a i {
+    margin-right: 8px;
+  }

@@ -1,199 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link
+      rel="icon"
+      href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>मातृबोधः</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    <link rel="stylesheet" href="scontentcss.css">
-    <link rel="stylesheet" href="footercss.css">
-    <link rel="stylesheet" href="feedback.css">
-</head>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css" />
+    <link rel="stylesheet" href="scontentcss.css" />
+    <link rel="stylesheet" href="footercss.css" />
+    <link rel="stylesheet" href="feedback.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav>
-            <!-- Wrap the logo text in an anchor tag -->
-            <a href="index.html" class="logo">मातृबोधः</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html#wisdom">About</a></li>
-                <li class="dropdown">
-                    <a href="#">Content</a>
-                    <ul class="dropdown-content">
-                        <li><a href="countingpage.html">Counting</a></li>
-                        <li><a href="#">Days</a></li>
-                        <li><a href="#">Activities</a></li>
-                    </ul>
-                </li>
-                <li><a href="login.html">Login</a></li>
+      <nav>
+        <a href="index.html" class="logo">मातृबोधः</a>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#wisdom">About</a></li>
+          <li class="dropdown">
+            <a href="#">Content</a>
+            <ul class="dropdown-content">
+              <li><a href="countingpage.html">Counting</a></li>
+              <li><a href="#">Days</a></li>
+              <li><a href="activities.html">Activities</a></li>
             </ul>
-            <a href="#" class="btn-contact">Contact</a>
-        </nav>
+          </li>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="toggle-menu">☰</div>
+      </nav>
     </header>
     <div class="main-section">
-        <div class="container">
-            <h1>Your Feedback is Valuable To Us</h1>
-            <div class="first-q">
-                <h2>How was the User Interface?</h2>
-                <div class="choice">
-                    <div class="l1">
-                        <input type="radio" for="a1" name="ux">
-                        <label for="a1">Outstanding</label>
-                    </div>
-                    <div class="l2">
-                        <input type="radio" for="a2" name="ux">
-                        <label for="a2">Exceeds Expectations</label>
-                    </div>
-                    <div class="l3">
-                        <input type="radio" for="a3" name="ux">
-                        <label for="a3">Meets Expectations</label>
-                    </div>
-                    <div class="l4">
-                        <input type="radio" for="a4" name="ux">
-                        <label for="a4">Needs Improvement</label>
-                    </div>
-                </div>
+
             </div>
-            <div class="first-q">
-                <h2>How smooth was the Navigation?</h2>
-                <div class="choice">
-                    <div class="l1">
-                        <input type="radio" for="b1" name="ui">
-                        <label for="b1">Outstanding</label>
-                    </div>
-                    <div class="l2">
-                        <input type="radio" for="b2" name="ui">
-                        <label for="b2">Exceeds Expectations</label>
-                    </div>
-                    <div class="l3">
-                        <input type="radio" for="b3" name="ui">
-                        <label for="b3">Meets Expectations</label>
-                    </div>
-                    <div class="l4">
-                        <input type="radio" for="b4" name="ui">
-                        <label for="b4">Needs Improvement</label>
-                    </div>
-                </div>
+            <div class="l4">
+              <input type="radio" id="c4" name="nav" />
+              <label for="c4">Needs Improvement</label>
             </div>
-            <div class="first-q">
-                <h2>How was your User Experience?</h2>
-                <div class="choice">
-                    <div class="l1">
-                        <input type="radio" for="c1" name="nav">
-                        <label for="c1">Outstanding</label>
-                    </div>
-                    <div class="l2">
-                        <input type="radio" for="c2" name="nav">
-                        <label for="c2">Exceeds Expectations</label>
-                    </div>
-                    <div class="l3">
-                        <input type="radio" for="c3" name="nav">
-                        <label for="c3">Meets Expectations</label>
-                    </div>
-                    <div class="l4">
-                        <input type="radio" for="c4" name="nav">
-                        <label for="c4">Needs Improvement</label>
-                    </div>
-                </div>
-            </div>
-            <div class="btn">
-                <button type="submit" id="button" onclick="notify()"><a href="index.html">Send</a></button>
-            </div>
+          </div>
         </div>
+        <div class="btn">
+          <button type="submit" id="button" onclick="validateForm()">
+            Send
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Updated Footer Section --> 
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+      <h3>मातृबोधः</h3>
+      <p>
+        Educating children through India's timeless wisdom and cultural
+        heritage.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Linkedin"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+
+      <!-- GitHub Star Button -->
+      <div class="github-star">
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">
+          <i class="fab fa-github"></i> Star on GitHub
+        </a>
+      </div>
     </div>
 
-
-    <footer class="main-footer">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h3>मातृबोधः</h3>
-            <p>
-              Educating children through India's timeless wisdom and cultural
-              heritage.
-            </p>
-            <div class="social-links">
-              <a
-                href="https://github.com/Anjaliavv51/Matrubodhah"
-                target="_blank"
-                aria-label="Facebook"
-                ><i class="fab fa-facebook"></i
-              ></a>
-              <a
-                href="https://github.com/Anjaliavv51/Matrubodhah"
-                target="_blank"
-                aria-label="Twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
-              <a
-                href="https://github.com/Anjaliavv51/Matrubodhah"
-                target="_blank"
-                aria-label="Instagram"
-                ><i class="fab fa-instagram"></i
-              ></a>
-              <a
-                href="https://github.com/Anjaliavv51/Matrubodhah"
-                target="_blank"
-                aria-label="YouTube"
-                ><i class="fab fa-youtube"></i
-              ></a>
-              <a
-                href="https://github.com/Anjaliavv51/Matrubodhah"
-                target="_blank"
-                aria-label="Linkedin"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
-            </div>
-          </div>
-  
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li><a href="#hero">Home</a></li>
-              <li><a href="#wisdom">About Us</a></li>
-              <li><a href="#content">Our Courses</a></li>
-              <!-- need to add contact page link -->
-              <li><a href="#hero">Contact</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h4>Learning Paths</h4>
-            <ul>
-              <!-- need to add respective page link -->
-              <li><a href="countingpage.html">Counting</a></li>
-              <li><a href="#hero">Days</a></li>
-              <li><a href="#hero">Activities</a></li>
-            </ul>
-          </div>
-  
-          <div class="footer-section">
-            <h4>Contact Us</h4>
-            <ul class="contact-info">
-              <li>
-                <i class="fas fa-envelope"></i
-                ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
-              </li>
-              <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
-            </ul>
-          </div>
-        </div>
-  
-        <div class="footer-bottom">
-          <p>
-            &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
-            <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
-              >@Sakthi</a
-            >
-          </p>
-        </div>
-      </footer>
-</body>
-<script>
-    function notify(){
-        alert("Feedback Submitted Sucessfully")
-    }
-</script>
-</html>

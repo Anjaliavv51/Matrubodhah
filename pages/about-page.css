@@ -1,86 +1,101 @@
-body {
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    color: black;
-    box-sizing: border-box;
-    background-image: url('image.png');
-    background-attachment: fixed;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-.main-section{
-    margin-top: 7rem;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-.container{
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 5rem;
-}
-.feedback-head{
-    font-size:large;
-    font-weight: 600;
-}
-.first-q{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 1px 10px 1px 10px;
-    gap: 12px;
-}
-.choice{
-    width: 40vw;
-    height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.l1,.l2,.l3,.l4{
-    display: flex;
-    align-items: center;
-    padding: 6px 4px 6px 4px;
-    border: 1px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-}
-.l1:hover,.l2:hover,.l3:hover,.l4:hover{
-   background-color: rgba(131, 168, 248, 0.477);
+header{
+    padding: 20px;
 }
 
-button{
-    width: 100px;
-    height: 40px;
-}
-a{
+header a{
     text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+    font-family: sans-serif;
+    padding: 10px;
+    background-color: #dad9d967;
     color: black;
+    border-radius: 3px;
 }
-.btn:hover{
-   cursor: pointer;
-   background-color: white;
+
+header a:hover{
+    background-color: #b4b4b483;
 }
-button:hover{
-    background-color: #E5A186;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
+.wisdom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 5%;
+    box-sizing: border-box;
+    background-color: white;
+    margin-top: 50px;
+  }
+  
+  .wisdom-content {
+    flex: 1;
+    padding-right: 20px;
+    margin-left: 8%;
+    margin-right: 5%;
+  }
+  
+  .wisdom-content h1 {
+    font-size: 46px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .wisdom-content h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .wisdom-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .wisdom-content a {
+    color: black;
+    text-decoration: none;
+    border-radius: 0;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .bt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e5a186;
+    transition: width 0.3s ease;
+  }
+  .bt:hover {
+    color: #e5a186;
+  }
+  
+  .bt:hover::after {
+    width: 28%;
+  }
+  
+  .wisdom-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    margin-right: 8%;
+  }
+  
+  .wisdom-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
 
 /* ========================
    Footer Section

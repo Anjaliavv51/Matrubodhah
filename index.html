@@ -8,6 +8,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>मातृबोधः</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="footercss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 132px;
+            right: 30px;
+            height: 55px;
+            width: 55px;
+            background-color: rgb(218, 128, 76);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: rgb(218, 128, 76);
+        }
+    </style>
+
+</head>
+<body>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="animations.css" />
     <link rel="stylesheet" href="scontentcss.css" />
@@ -23,27 +52,28 @@
   </head>
   <body>
     <header>
-        <nav>
-            <!-- Wrap the logo text in an anchor tag -->
-            <a href="#hero" class="logo">मातृबोधः</a>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#wisdom">About</a></li>
-               
-                <li class="dropdown">
-                    <a href="#">Content</a>
-                    <ul class="dropdown-content">
-                        <li><a href="countingpage.html">Counting</a></li>
-                        <li><a href="#">Days</a></li>
-                        <li><a href="#">Activities</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
-                    </ul>
-                </li>
-                <li><a href="login.html">Login</a></li>
-                
-            <a href="#" class="btn-contact">Contact</a>
-           </ul>
-        </nav>
+      <nav>
+        <!-- Wrap the logo text in an anchor tag -->
+        <a href="#hero" class="logo">मातृबोधः</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about-page.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Content</a>
+                <ul class="dropdown-content">
+                    <li><a href="countingpage.html">Counting</a></li>
+                    <li><a href="#">Days</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+        <div class="toggle-menu">☰</div>
+    </nav>
+
     </header>
     <!-- Hero Section -->
      <!-- <div class=""> -->
@@ -188,7 +218,7 @@
         <a href="#" class="bt">Get in touch</a>
       </div>
       <div class="wisdom-image">
-        <img src="/1.jpg" alt="Krishna and Arjuna on chariot" />
+        <img src="1.jpg" alt="Krishna and Arjuna on chariot" />
       </div>
     </section>
     <section class="content-section" id="content">
@@ -245,90 +275,107 @@
       </div>
     </section>
 
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up fa-xl"></i>
+    </button>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+    <!-- Footer Section -->
     <footer class="main-footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>मातृबोधः</h3>
-          <p>
-            Educating children through India's timeless wisdom and cultural
-            heritage.
-          </p>
-          <div class="social-links">
-            <a
-              href="https://github.com/Anjaliavv51/Matrubodhah"
-              target="_blank"
-              aria-label="Facebook"
-              ><i class="fab fa-facebook"></i
-            ></a>
-            <a
-              href="https://github.com/Anjaliavv51/Matrubodhah"
-              target="_blank"
-              aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="https://github.com/Anjaliavv51/Matrubodhah"
-              target="_blank"
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a
-              href="https://github.com/Anjaliavv51/Matrubodhah"
-              target="_blank"
-              aria-label="YouTube"
-              ><i class="fab fa-youtube"></i
-            ></a>
-            <a
-              href="https://github.com/Anjaliavv51/Matrubodhah"
-              target="_blank"
-              aria-label="Linkedin"
-              ><i class="fa-brands fa-linkedin-in"></i
-            ></a>
-          </div>
-        </div>
-
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#wisdom">About Us</a></li>
-            <li><a href="#content">Our Courses</a></li>
-            <!-- need to add contact page link -->
-            <li><a href="#hero">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Learning Paths</h4>
-          <ul>
-            <!-- need to add respective page link -->
-            <li><a href="countingpage.html">Counting</a></li>
-            <li><a href="#hero">Days</a></li>
-            <li><a href="#hero">Activities</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4>Contact Us</h4>
-          <ul class="contact-info">
-            <li>
-              <i class="fas fa-envelope"></i
-              ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
-            </li>
-            <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
-          </ul>
-        </div>
+    <div class="footer-content">
+    <div class="footer-section">
+      <h3>मातृबोधः</h3>
+      <p>
+        Educating children through India's timeless wisdom and cultural
+        heritage.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Linkedin"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
       </div>
 
-      <div class="footer-bottom">
-        <p>
-          &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
-          <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
-            >@Sakthi</a
-          >
-        </p>
+      <!-- GitHub Star Button -->
+      <div class="github-star">
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">
+          <i class="fab fa-github"></i> Star on GitHub
+        </a>
       </div>
-    </footer>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#wisdom">About Us</a></li>
+        <li><a href="#content">Our Courses</a></li>
+        <li><a href="#hero">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Learning Paths <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="countingpage.html">Counting</a></li>
+        <li><a href="#hero">Days</a></li>
+        <li><a href="#hero">Activities</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Newsletter <div class="underline"><span></span></div></h4>
+      <form>
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+      <br>
+      <h4>Contact Us <div class="underline"><span></span></div></h4>
+      <ul class="contact-info">
+        <li>
+          <i class="fas fa-envelope"></i
+          ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
+      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
+        >@Sakthi</a
+      >
+    </p>
+  </div>
+</footer>
 
     <script
       src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js"
@@ -336,6 +383,29 @@
     ></script>
     <script src="scrollscript.js"></script>
     <script src="audio.js"></script>
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("scrollToTopBtn");
+      
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        };
+      
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.onclick = function () {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        };
+      </script>
+
+
+</body>
+</html>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="index.js"></script>

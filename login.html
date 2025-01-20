@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link
+      rel="icon"
+      href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp"
+    />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login and Signup Form</title>
@@ -26,43 +30,76 @@
                     <ul class="dropdown-content">
                         <li><a href="countingpage.html">Counting</a></li>
                         <li><a href="#">Days</a></li>
-                        <li><a href="#">Activities</a></li>
+                        <li><a href="activities.html">Activities</a></li>
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" >Contact</a></li>
             </ul>
-            <a href="#" class="btn-contact">Contact</a>
+            <div class="toggle-menu">☰</div>
         </nav>
     </header>
-    <div class="wrapper">
-        <h1>Login</h1>
-        <form action="#" onsubmit="return handleLogin(event)">
-            <input type="text" placeholder="Username" id="username" required>
-            <input type="password" placeholder="Password" id="password" required>
-            <div class="recover">
-                <a href="#">Forgot Password</a>
-            </div>
-            <button type="submit">Login</button>
-        </form>
-        <div class="member">
-            Not a member? <a href="./signup.html">
-                Register Now
-            </a>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <p>By creating account, you agree with the <a href="terms.html" class="click">Terms and conditions</a></p>
+                <button>Sign Up</button>
+
+            </form>
+
         </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>Sign In</h1>
+                
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <a href="#">Forgot your password?<span class="click">Click here</span></a>
+                <button>Sign In</button>
+            </form>
+
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>
+                        To keep connected with us please login with your personal info
+                    </p>
+                    <button class="ghost" id="signIn">Sign In</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Friend!</h1>
+                    <p>Enter your personal details and start journey with us</p>
+                    <button class="ghost" id="signUp">Sign Up</button>
+
+                </div>
+            </div>
+
+        </div>
+
     </div>
-    
+
+
     <script>
-        function handleLogin(event) {
-            event.preventDefault(); // Prevent the form from submitting
-            const username = document.getElementById('username').value;
-            const password = document.getElementById('password').value;
-            
-            if (username && password) {
-                alert('Login successful!');
-            } else {
-                alert('Please enter your username and password.');
-            }
-        }
+        
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click',()=>
+    container.classList.add('right-panel-active')
+);
+signInButton.addEventListener('click',()=>
+    container.classList.remove('right-panel-active')
+);
+
     </script>
      <div class="footer">
     Made with ❤️ by <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a>
@@ -70,6 +107,6 @@
 
     <script src="scrollscript.js"></script>
     <script src="audio.js"></script>
-    
+    <script src="index.js"></script>
 </body>
 </html>

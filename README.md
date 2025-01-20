@@ -1,6 +1,14 @@
 # Matrubodhah
 Cultural Education contents in Indian philosophy or spirituality related to maternal wisdom or understanding.
 
+[![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+
+<tr>
+<td align="center">
+<a href="https://www.socialwinterofcode.com/"><img src="https://github.com/Rakesh9100/Beautiify/assets/73993775/9235952f-9062-4352-992d-eb34e4d60283" height="140px" width="180px" alt="SWOC2025"></a><br><sub><b>SWOC 2k25</b></sub>
+</td>
+</tr>
+
 <table align="center">
     <thead align="center">
         <tr border: 1px;>
@@ -86,6 +94,16 @@ It is an online platform which enables you to get eduction in cultural way.</p>
    Go to the GitHub page of your forked repository. You should see a prompt to create a pull request (PR). Click on it, compare the changes, and create the PR.
 <br><br>
 
+
+<h2>Project Admin:zap:</h2>
+
+<table>
+<tr>
+<td align="center">
+<a href="https://github.com/Anjaliavv51/"><img src="https://avatars.githubusercontent.com/u/154777864?v=4&size=64" height="140px" width="140px" alt="Pavananjali"></a><br><sub><b>Pavananjali</b><br><a href="www.linkedin.com/in/lakshmi-pavananjali-pamidi-766760296"><img src="https://github-production-user-asset-6210df.s3.amazonaws.com/73993775/278833250-adb040ea-e3ef-446e-bcd4-3e8d7d4c0176.png" width="45px" height="45px"></a></sub>
+</td>
+</tr>
+</table>
 
 
 <p style="font-family:var(--ff-philosopher);font-size:3rem;text-align:center;"><b>Contributing
