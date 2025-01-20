@@ -27,6 +27,8 @@ nav {
   gap: 5px;
   align-items: center;
   padding: 10px 5%;
+  background-color: #E5A186;
+  position:sticky;
 }
 
 .logo {
@@ -52,6 +54,10 @@ nav {
   padding: 0;
   flex: 1;
   justify-content: flex-end;
+}
+.nav-links:hover{
+  color:black;;
+  font-size:20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -292,24 +298,14 @@ nav {
   margin-right: 8%;
 }
 
+
+
 .wisdom-image img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
-/* Adjust carousel image height */
-.hero-duplicate{
-     /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 5%;
-    margin-top: 80px; 
-    /* background: url('/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg') no-repeat center/cover; */
-    /* z-index: 1;  */
 
-}
 .carousel-item{
     position: relative;
      display: flex;
