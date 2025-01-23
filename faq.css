@@ -8,7 +8,8 @@ body {
 
 .faq-container {
     width: 1000px;
-    margin: 50px auto;
+    margin-top: 500px;
+    margin-bottom: 50px;
     padding: 20px;
     background: #fff;
     border-radius: 8px;
