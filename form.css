@@ -1,0 +1,91 @@
+.hero {
+    background-image: url("WhatsApp Image 2024-09-24 at 01.04.26_9c5f6797.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #46636c;
+}
+
+.container-form {
+    padding: 40px 60px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.container-form:hover {
+    box-shadow: 0 0 20px pink;
+}
+
+.container-form img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.container-form h1 {
+    font-size: 75px;
+    margin-top: 20px;
+    padding: 40px;
+    padding-bottom: 0;
+    color: transparent;
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet);
+    background-clip: text;
+    text-align: center;
+}
+
+.container-form input, .container-form textarea {
+    margin: 10px 0;
+    border-radius: 18px;
+    padding: 15px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.container-form #name {
+    height: 45px;
+}
+
+.container-form #email {
+    height: 45px;
+}
+
+.container-form #message {
+    resize: none;
+    height: 150px;
+}
+
+.container-form .submit {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 18px;
+    padding: 15px;
+    width: 100%;
+    background-color: #46636c;
+    font-weight: bold;
+    color: #f9cece;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container-form .submit:hover {
+    background-color: #3b4f56;
+    color: #f9cece;
+}
+
+@media (max-width: 768px) {
+    .container-form {
+        width: 90%;
+        padding: 20px;
+    }
+}
