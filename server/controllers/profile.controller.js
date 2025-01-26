@@ -23,6 +23,7 @@ const getProfile = async (req, res) => {
 
         // Step 2: Extract the token from the Authorization header
         const token = authHeader.split(' ')[1];
+        console.log(token)
         if (!token) {
             // If the token is missing, return an error
             console.error("Bearer token is missing.");
