@@ -1,105 +1,170 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
+    <link rel="icon" href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <title>मातृबोधः</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="about-page.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="../footercss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 132px;
+            right: 30px;
+            height: 55px;
+            width: 55px;
+            background-color: rgb(218, 128, 76);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: rgb(218, 128, 76);
+        }
+    </style>
+
+</head>
+<body>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="scontentcss.css">
     <link rel="stylesheet" href="footercss.css">
-    <link rel="stylesheet" href="../Scroll.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <title>About us</title>
-</head>
-<body>
-     <nav>
-        <!-- Wrap the logo text in an anchor tag -->
-        <a href="#hero" class="logo">मातृबोधः</a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="pages/about-page.html">About</a></li>
-            <li class="dropdown">
-                <a href="#">Content</a>
-                <ul class="dropdown-content">
-                    <li><a href="../countingpage.html">Counting</a></li>
-                    <li><a href="#">Days</a></li>
-                    <li><a href="../activities.html">Activities</a></li>
-                    <li><a href="../feedback.html">Feedback</a></li>
-                </ul>
-            </li>
-            <li id="loginlist" ><a href="../login.html">Login</a></li>
-            <li id="profilelist"><a  href="../profile.html">Profile</a></li>
-            <li><a href="../faq.html">FAQ</a></li>
-            <li><a href="../contact.html" >Contact</a></li>
-        </ul>
-        <div class="toggle-menu">☰</div>
-    </nav>
-<hr>
-     <!-- Scroll -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  
+    <!-- Scroll -->
     <div id="scrollButton" class="hidden">
-        <div class="outer-circle">
+        <div class="outer-circle" style="--scroll-progress: 0deg;">
             <div class="inner-circle">
                 <div class="arrow">↑</div>
             </div>
         </div>
     </div>
+    <header>
+      <nav>
+        <!-- Wrap the logo text in an anchor tag -->
+        <a href="#hero" class="logo">मातृबोधः</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about-page.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Content</a>
+                <ul class="dropdown-content">
+                    <li><a href="countingpage.html">Counting</a></li>
+                    <li><a href="#">Days</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </li>
+            <li id="loginlist" style="display: block;"><a href="login.html">Login</a></li>
+            <li id="profilelist" style="display: none;"><a href="profile.html">Profile</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="toggle-menu">☰</div>
+    </nav>
+
+    </header>
+    <!-- Hero Section -->
+     <!-- <div class=""> -->
+    <!-- <section id="hero" class="hero">
+      <h1 class="wave-text">
+        <span>मा</span><span>तृ</span><span>बो</span><span>धः</span
+        ><span
+          ><img
+            id="audio-icon"
+            src="https://ttdevasthanams.ap.gov.in/muteIcon.svg"
+        /></span>
+      </h1>
+      <h2>
+        वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ। निर्विघ्नं कुरु मे देव सर्वकार्येषु
+        सर्वदा॥
+      </h2>
+      <p class="subtitle">
+        A Chariot of Indian Children with Ancient Wisdom for Modern Times
+      </p>
+      <a href="#" class="btn">View Services</a>
+    </section> -->
+
+    <!-- </div> -->
+    <section id="hero" class="hero scrolled">
+  <div id="heroCarousel" class="carousel slide pointer-event" data-bs-ride="carousel">
+    <!-- Carousel Indicators -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1" fdprocessedid="bhuwpi"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2" fdprocessedid="yo5ll9" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3" fdprocessedid="xwk3o" class=""></button>
+    </div>
+
+    <!-- Carousel Content -->
     
-    <section id="wisdom" class="wisdom-section">
-        <div class="wisdom-content">
-          <h1>मातृबोधः</h1>
-          <h2>Educating Kids with India’s Cultural Heritage</h2>
-          <p>
-            Our platform offers an immersive learning experience for children,
-            blending education with the timeless wisdom of India's rich cultural
-            traditions. Through interactive lessons, games, and stories, we
-            introduce kids to the beauty of Sanskrit, ancient Indian mythology,
-            and values like the Purusharthas. Whether it's learning to count with
-            the Vedas or exploring the adventures of Hanuman, we provide a fun and
-            engaging way for children to connect with their heritage. With a focus
-            on fostering curiosity and cultural pride, our platform creates a
-            learning environment that inspires young minds.
-          </p>
-          <a href="../index.html" class="bt">Get in touch</a>
-        </div>
-        <div class="wisdom-image">
-          <img src="/1.jpg" alt="Krishna and Arjuna on chariot" />
-        </div>
+
+    <!-- Carousel Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev" fdprocessedid="khx3">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next" fdprocessedid="c10d6">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
       </section>
+
+    <!-- Wisdom Section -->
+    <section id="wisdom" class="wisdom-section">
+      <div class="wisdom-content scrolled">
+        <h1>मातृबोधः</h1>
+        <h2>Educating Kids with India's Cultural Heritage</h2>
+        <p>
+          Our platform offers an immersive learning experience for children,
+          blending education with the timeless wisdom of India's rich cultural
+          traditions. Through interactive lessons, games, and stories, we
+          introduce kids to the beauty of Sanskrit, ancient Indian mythology,
+          and values like the Purusharthas. Whether it's learning to count with
+          the Vedas or exploring the adventures of Hanuman, we provide a fun and
+          engaging way for children to connect with their heritage. With a focus
+          on fostering curiosity and cultural pride, our platform creates a
+          learning environment that inspires young minds.
+        </p>
+        <a href="#" class="bt">Get in touch</a>
+      </div>
+      <div class="wisdom-image scrolled">
+        <img src="1.jpg" alt="Krishna and Arjuna on chariot">
+      </div>
+    </section>
     
-    <!-- Updated Footer Section --> 
+    
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up fa-xl"></i>
+    </button>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+    <!-- Footer Section -->
     <footer class="main-footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>मातृबोधः</h3>
-                <p>Educating children through India's timeless wisdom and cultural heritage.</p>
-                <div class="social-links">
-                    <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Twitter"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="YouTube"
-          ><i class="fab fa-youtube"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Linkedin"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
+    <div class="footer-content">
+    <div class="footer-section">
+      <h3>मातृबोधः</h3>
+      <p>
+        Educating children through India's timeless wisdom and cultural
+        heritage.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank" aria-label="Linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
 
       <!-- GitHub Star Button -->
@@ -133,15 +198,14 @@
       <h4>Newsletter <div class="underline"><span></span></div></h4>
       <form>
         <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Enter your email id" required>
-        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+        <input type="email" placeholder="Enter your email id" required="" fdprocessedid="t3xf0n">
+        <button type="submit" fdprocessedid="t4e3il"><i class="fas fa-arrow-right"></i></button>
       </form>
       <br>
       <h4>Contact Us <div class="underline"><span></span></div></h4>
       <ul class="contact-info">
         <li>
-          <i class="fas fa-envelope"></i
-          ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
+          <i class="fas fa-envelope"></i><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
         </li>
         <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
       </ul>
@@ -149,13 +213,84 @@
   </div>
   <div class="footer-bottom">
     <p>
-      &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
-      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
-        >@Sakthi</a
-      >
+      © 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
+      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">@Sakthi</a>
     </p>
   </div>
 </footer>
-     <script src="../Scroll.js"></script>
+
+    <script src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js" async=""></script>
+    <script src="scrollscript.js"></script>
+    <script src="audio.js"></script>
+    <!-- Scroll to Top Button -->
+<script>
+   const scrollButton = document.getElementById('scrollButton');
+const outerCircle = document.querySelector('.outer-circle');
+const arrow = document.querySelector('.arrow');
+
+// Function to handle scroll behavior
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = (scrollTop / scrollHeight) * 360;
+
+    // Show button after scrolling 7-8 lines (~100px)
+    if (scrollTop > 100) {
+        scrollButton.classList.add('visible');
+    } else {
+        scrollButton.classList.remove('visible');
+    }
+
+    // Update the circular progress
+    outerCircle.style.setProperty('--scroll-progress', `${scrollProgress}deg`);
+});
+
+// Scroll-to-top functionality
+scrollButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="index.js"></script>
+    <script src="roadmap.js"></script>
+    <script>
+      document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', () => {
+        const cardText = button.previousElementSibling;
+        if (cardText.classList.contains('collapsed')) {
+            cardText.classList.remove('collapsed');
+            cardText.classList.add('expanded');
+            button.textContent = "Read Less";
+        } else {
+            cardText.classList.remove('expanded');
+            cardText.classList.add('collapsed');
+            button.textContent = "Read More";
+        }
+    });
+});
+
+    </script>
+
+    <script>
+      const login = document.getElementById("loginlist")
+      const profile = document.getElementById("profilelist")
+      if (localStorage.getItem("token")) {
+        console.log("user logged in")
+        login.style.display = "none"
+        profile.style.display="block"
+      }else{
+        console.log("user not logged in")
+        login.style.display = "block"
+        profile.style.display="none"
+      }
+    </script>
+  
+</div>
 </body>
+
 </html>
