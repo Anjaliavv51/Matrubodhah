@@ -2,24 +2,31 @@
     margin: 0;
     padding: 0;
 }
-
-header{
-    padding: 20px;
+header {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
 }
-
-header a{
-    text-decoration: none;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: sans-serif;
-    padding: 10px;
-    background-color: #dad9d967;
-    color: black;
-    border-radius: 3px;
+/* Styling for the link */
+header a {
+  text-decoration: none;
+  font-size: 14px; /* Slightly larger font for better readability */
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+  padding: 10px 15px; /* Add more padding for a comfortable click area */
+  background-color: #e4e4e4; /* Neutral background */
+  color: #333; /* Darker text for contrast */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
 }
-
-header a:hover{
-    background-color: #b4b4b483;
+/* Hover effect for the link */
+header a:hover {
+  background-color: #cfcfcf; /* Slightly darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge for emphasis */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
 }
 .wisdom-section {
     display: flex;
