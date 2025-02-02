@@ -1,48 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp">
+    <link
+      rel="icon"
+      href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp"
+    />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>मातृबोधः</title>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="scontentcss.css">
-    <link rel="stylesheet" href="counting.css">
     <link rel="stylesheet" href="footercss.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="counting.css">
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="Scroll.css">
+    <!-- Font Awesome CDN link --> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Scroll -->
+    <div id="scrollButton" class="hidden">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <div class="arrow">↑</div>
+            </div>
+        </div>
+    </div>
     <header>
         <nav>
             <!-- Wrap the logo text in an anchor tag -->
-            <a href="index.html" class="logo">मातृबोधः</a>
+            <a href="#hero" class="logo">मातृबोधः</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#wisdom">About</a></li>
+                <li><a href="index.html#wisdom">About</a></li>
                 <li class="dropdown">
                     <a href="#">Content</a>
                     <ul class="dropdown-content">
                         <li><a href="countingpage.html">Counting</a></li>
                         <li><a href="#">Days</a></li>
                         <li><a href="activities.html">Activities</a></li>
-                        <li><a href="feedback.html">Feedback</a></li>
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="contact.html" >Contact</a></li>
+
             </ul>
             <div class="toggle-menu">☰</div>
         </nav>
     </header>
-    <div class="game-container"></div>
-        <!-- Lotus buttons will be dynamically added here -->
+  <div class="faq-container">
+    <h1>Frequently Asked Questions</h1>
+    <div class="faq">
+      <h3 class="faq-question">What is the purpose of this website?</h3>
+      <div class="faq-answer">
+        <p>Our website aims to educate children about India's rich cultural heritage, including its history, traditions, art, literature, and diverse cultures in an engaging and interactive way.</p>
+      </div>
     </div>
-    <div class="counting">
-        <h2>Counting Practice</h2>
-        <p>Practice counting here...</p>
+    <div class="faq">
+      <h3 class="faq-question">What age group is this website suitable for?</h3>
+      <div class="faq-answer">
+        <p>The content on this website is designed for children aged 6 to 14 years. However, anyone interested in learning about India's cultural heritage can explore the site.</p>
+      </div>
     </div>
+    <div class="faq">
+      <h3 class="faq-question">What kind of resources can I find on this website?</h3>
+      <div class="faq-answer">
+        <p>You can find a variety of resources, including interactive lessons, fun activities, educational videos, and stories about historical events and famous personalities from India.</p>
+      </div>
+    </div>
+    <div class="faq">
+      <h3 class="faq-question">How can I contact support if I have any questions or issues?</h3>
+      <div class="faq-answer">
+        <p>If you have any questions or issues, you can contact our support team through the "Contact us" page. Fill out the form, and our team will get back to you as soon as possible.</p>
+      </div>
+    </div>
+    <!-- Add more FAQs as needed -->
+  </div>
+
+
+    <script>
+        
+// script.js
+// script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const answer = question.nextElementSibling;
+
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                answer.style.padding = "0 10px";
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                answer.style.padding = "10px";
+            }
+        });
+    });
+});
+
+
+
+    </script>
 
     <!-- Updated Footer Section --> 
 <footer class="main-footer">
@@ -141,42 +204,10 @@
   </div>
 </footer>
 
-    
+
+    <script src="Scroll.js"></script>
     <script src="scrollscript.js"></script>
     <script src="audio.js"></script>
-    <script>
-        const gameContainer = document.querySelector('.game-container');
-        const blast = document.querySelector('.blast');
-
-        function createLotus(number) {
-            const lotus = document.createElement('div');
-            lotus.className = 'lotus';
-            lotus.innerHTML = `
-                <div class="petal" style="transform: rotate(0deg)"></div>
-                <div class="petal" style="transform: rotate(72deg)"></div>
-                <div class="petal" style="transform: rotate(144deg)"></div>
-                <div class="petal" style="transform: rotate(216deg)"></div>
-                <div class="petal" style="transform: rotate(288deg)"></div>
-                ${number}
-            `;
-            lotus.addEventListener('click', () => {
-                lotus.classList.add('open');
-                setTimeout(() => {
-                    blast.classList.add('show');
-                    setTimeout(() => {
-                        blast.classList.remove('show');
-                        lotus.classList.remove('open');
-                    }, 1500);
-                }, 300);
-            });
-            return lotus;
-        }
-
-        for (let i = 1; i <= 10; i++) {
-            gameContainer.appendChild(createLotus(i));
-        }
-        
-    </script>
     <script src="index.js"></script>
 </body>
 </html>

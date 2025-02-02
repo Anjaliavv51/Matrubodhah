@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="DALL\u00b7E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मातृबोधः</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="footercss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image.png');
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 150px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .profile-container.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .profile-header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0056b3;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-header img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-details {
+            padding: 2rem;
+        }
+
+        .profile-details div {
+            margin-bottom: 1rem;
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .profile-details div.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .profile-details label {
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        button {
+            display: block;
+            margin: 2rem auto;
+            padding: 0.5rem 2rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #0056b3;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #004099;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">मातृबोधः</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#wisdom">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Content</a>
+                    <ul class="dropdown-content">
+                        <li><a href="countingpage.html">Counting</a></li>
+                        <li><a href="#">Days</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+                <li><a id="logoutbtn">Logout</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle-menu">☰</div>
+        </nav>
+    </header>
+    
+    <div class="profile-container">
+        <div class="profile-header">
+            <img id="profile-pic" src="" alt="Profile Picture">
+            <h2 id="username">Username</h2>
+        </div>
+        <div class="profile-details">
+            <div>
+                <label>Name:</label>
+                <span id="name">Loading...</span>
+            </div>
+            <div>
+                <label>Age:</label>
+                <span id="age">Loading...</span>
+            </div>
+            <div>
+                <label>Email:</label>
+                <span id="email">Loading...</span>
+            </div>
+            <div>
+                <label>Location:</label>
+                <span id="location">Loading...</span>
+            </div>
+            <div>
+                <label>Date of Birth:</label>
+                <span id="dob">Loading...</span>
+            </div>
+            <div>
+                <label>Account Created:</label>
+                <span id="account-created">Loading...</span>
+            </div>
+        </div>
+        <div>
+            <button id="editbtn">Edit Profile</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const token = localStorage.getItem("token"); // Replace with the actual Bearer token
+
+            try {
+                const response = await axios.get('http://localhost:3000/api/v1/profile/getprofile', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                document.querySelector('.profile-container').classList.add('visible');
+
+                document.querySelectorAll('.profile-details div').forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 200);
+                });
+
+                document.getElementById('profile-pic').src = response.data.user.profilePicture || 'user-avatar.png';
+                document.getElementById('username').textContent = response.data.user.username || 'Not Updated';
+                document.getElementById('name').textContent = response.data.user.name || response.data.user.username;
+                document.getElementById('location').textContent = response.data.user.location || 'Not Updated';
+                document.getElementById('dob').textContent = response.data.user.dob || 'Not Updated';
+                document.getElementById('account-created').textContent = response.data.user.accountCreated || 'Not Updated';
+                document.getElementById('email').textContent = response.data.user.email || 'Not Updated';
+                document.getElementById('age').textContent = response.data.user.age || 'Not Updated';
+            } catch (error) {
+                console.error('Failed to fetch profile data:', error);
+            }
+        });
+
+        const logoutbtn = document.getElementById("logoutbtn");
+        logoutbtn.addEventListener("click", () => {
+            localStorage.removeItem("token");
+            window.location.href = "/";
+        });
+
+        const editbtn = document.getElementById("editbtn")
+        editbtn.addEventListener("click", ()=>{
+            window.location.href= "/edit-profile.html"
+        })
+    </script>
+</body>
+</html>

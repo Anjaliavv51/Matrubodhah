@@ -1,0 +1,22 @@
+name: PR Title Checker
+
+on:
+  pull_request:
+    types: [opened, edited]  # Run when a PR is opened or its title is edited
+
+jobs:
+  check-title:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.x
+
+      - name: Validate PR Title
+        run: |
+          python check_pr_title.py "${{ github.event.pull_request.title }}"
+

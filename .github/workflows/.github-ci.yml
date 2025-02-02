@@ -1,0 +1,5 @@
+validate_pr_title:
+  script:
+    - python check_pr_title.py "$CI_MERGE_REQUEST_TITLE"
+  only:
+    - merge_requests

@@ -1,0 +1,58 @@
+/* Scroll */
+#scrollButton {
+    position: fixed;
+    bottom: 115px;
+    right: 28px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0; /* Initially hidden */
+    pointer-events: none; /* Prevent interaction when hidden */
+    transition: opacity 0.7s ease; /* Smooth fade-in effect */
+}
+
+
+#scrollButton.visible {
+    opacity: 1; /* Fully visible */
+    pointer-events: auto; /* Enable interaction */
+}
+
+.outer-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        orange 0deg,
+        #fd835c var(--scroll-progress, 0deg),
+        #dddddd00 var(--scroll-progress, 0deg),
+        #dddddd00 360deg
+    );
+    transform: rotate(-90deg); /* Start animation from top */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+.inner-circle {
+    width: 45px;
+    height: 45px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.arrow {
+    font-size: 18px;
+    color: orange;
+    font-weight: bold;
+    transform: rotate(90deg); /* Fixed direction to the right */
+}

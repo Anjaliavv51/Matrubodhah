@@ -1,86 +1,108 @@
-body {
+*{
     margin: 0;
     padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    color: black;
+}
+header {
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+}
+/* Styling for the link */
+header a {
+  text-decoration: none;
+  font-size: 14px; /* Slightly larger font for better readability */
+  font-weight: 600;
+  font-family: 'Arial', sans-serif;
+  padding: 10px 15px; /* Add more padding for a comfortable click area */
+  background-color: #e4e4e4; /* Neutral background */
+  color: #333; /* Darker text for contrast */
+  border-radius: 5px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+/* Hover effect for the link */
+header a:hover {
+  background-color: #cfcfcf; /* Slightly darker background on hover */
+  transform: scale(1.05); /* Slightly enlarge for emphasis */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+.wisdom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 5%;
     box-sizing: border-box;
-    background-image: url('image.png');
-    background-attachment: fixed;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-.main-section{
-    margin-top: 7rem;
-    margin-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- 
-}
-.container{
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    text-align: center;
-    padding: 5rem;
-}
-.feedback-head{
-    font-size:large;
-    font-weight: 600;
-}
-.first-q{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 1px 10px 1px 10px;
-    gap: 12px;
-}
-.choice{
-    width: 40vw;
-    height: 30vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.l1,.l2,.l3,.l4{
-    display: flex;
-    align-items: center;
-    padding: 6px 4px 6px 4px;
-    border: 1px solid black;
-    border-radius: 4px;
-    cursor: pointer;
-    height: 30px;
-    width: 200px;
-}
-.l1:hover,.l2:hover,.l3:hover,.l4:hover{
-   background-color: rgba(131, 168, 248, 0.477);
-}
-
-button{
-    width: 100px;
-    height: 40px;
-}
-a{
-    text-decoration: none;
+    background-color: white;
+    margin-top: 50px;
+  }
+  
+  .wisdom-content {
+    flex: 1;
+    padding-right: 20px;
+    margin-left: 8%;
+    margin-right: 5%;
+  }
+  
+  .wisdom-content h1 {
+    font-size: 46px;
     color: black;
-}
-.btn:hover{
-   cursor: pointer;
-   background-color: white;
-}
-button:hover{
-    background-color: #E5A186;
-    color: white;
-    border: none;
-    border-radius: 4px;
-}
+    margin-bottom: 20px;
+  }
+  
+  .wisdom-content h2 {
+    font-size: 36px;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  .wisdom-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .wisdom-content a {
+    color: black;
+    text-decoration: none;
+    border-radius: 0;
+    margin-top: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .bt::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e5a186;
+    transition: width 0.3s ease;
+  }
+  .bt:hover {
+    color: #e5a186;
+  }
+  
+  .bt:hover::after {
+    width: 28%;
+  }
+  
+  .wisdom-image {
+    flex: 1;
+    max-width: 50%;
+    text-align: right;
+    margin-right: 8%;
+  }
+  
+  .wisdom-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
 
 /* ========================
    Footer Section
