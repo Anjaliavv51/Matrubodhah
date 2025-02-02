@@ -1,10 +1,32 @@
+
+:root{
+  --bg-shade: #faf8fa;
+  --primary-text-color:#38393a;
+
+}
+
+.dark-mode{
+  --bg-shade:rgb(59, 59, 59);
+  --primary-text-color:rgb(238, 234, 234);
+}
+
+
+
+#mode{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background-color: #fff;
-  color: #333;
+  background-color:var(--bg-shade);
+  color: var(--primary-text-color);
   box-sizing: border-box;
+  border: var(--primary-text-color) 5px solid;
 }
 html {
   scroll-behavior: smooth;
@@ -16,7 +38,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--bg-shade);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
@@ -27,12 +49,13 @@ nav {
   gap: 5px;
   align-items: center;
   padding: 10px 5%;
+  border: var(--primary-text-color) 5px solid;
 }
 
 .logo {
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: var(--primary-text-color);
   flex: 1;
   text-align: left;
   text-decoration: none;
@@ -47,6 +70,7 @@ nav {
 .nav-links {
   list-style: none;
   display: flex;
+  color: var(--primary-text-color);
   align-items: center;
   margin: 0;
   padding: 0;
@@ -67,7 +91,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: var(--primary-text-color);
   font-weight: bold;
   position: relative;
   transition: color 0.3s ease;
@@ -99,7 +123,7 @@ nav {
 .nav-links .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color:var(--bg-shade);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -108,7 +132,7 @@ nav {
 }
 
 .nav-links .dropdown-content a {
-  color: black;
+  color: var(--primary-text-color);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -119,14 +143,14 @@ nav {
 }
 
 .nav-links .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--bg-shade);
 }
 
 .btn-contact {
-  background-color: white;
-  color: black;
+  background-color: var(--bg-shade);
+  color: var(--primary-text-color);
   padding: 15px 30px;
-  border: 3px solid black;
+  border: 3px solid var(--primary-text-color);
   border-radius: 0;
   font-size: 16px;
   font-weight: bold;
@@ -215,8 +239,8 @@ nav {
 }
 
 .btn {
-  background-color: white;
-  color: black;
+  background-color:var(--bg-shade);
+  color: var(--primary-text-color);
   padding: 10px 20px;
   text-decoration: none;
   font-size: 18px;
@@ -238,7 +262,7 @@ nav {
   align-items: center;
   padding: 50px 5%;
   box-sizing: border-box;
-  background-color: white;
+  background-color: var(--bg-shade);
   margin-top: 50px;
 }
 
@@ -251,25 +275,25 @@ nav {
 
 .wisdom-content h1 {
   font-size: 46px;
-  color: black;
+  color: var(--primary-text-color);
   margin-bottom: 20px;
 }
 
 .wisdom-content h2 {
   font-size: 36px;
-  color: black;
+  color: var(--primary-text-color);
   margin-bottom: 20px;
 }
 
 .wisdom-content p {
   font-size: 18px;
-  color: #333;
+  color: var(--primary-text-color);
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .wisdom-content a {
-  color: black;
+  color: var(--primary-text-color);
   text-decoration: none;
   border-radius: 0;
   margin-top: 10px;
@@ -299,6 +323,7 @@ nav {
   max-width: 50%;
   text-align: right;
   margin-right: 8%;
+  
 }
 
 .wisdom-image img {
@@ -374,8 +399,8 @@ nav {
 
 /* Button styling */
 .carousel_caption .btn {
-    background-color: white;
-    color: black;
+    background-color: var(--bg-shade);
+    color:var(--primary-text-color);
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;

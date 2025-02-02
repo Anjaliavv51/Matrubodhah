@@ -1,7 +1,21 @@
+:root{
+    
+    --bg-shade: #faf8fa;
+    --primary-text-color:#38393a;
+    
+  }
+  
+  .dark-mode{
+    --bg-shade:rgb(59, 59, 59);
+    --primary-text-color:rgb(238, 234, 234);
+    
+    
+  
+  }
 .main-footer {
-    background-color: #f8f8f8;
+    background-color: var(--bg-shade);
     padding: 4rem 5%;
-    color: #333;
+    color:var(--primary-text-color);
     font-family: 'Arial', sans-serif;
     border-top: 3px solid #E5A186;
 }
@@ -16,13 +30,13 @@
 .footer-section h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: #000;
+    color: var(--primary-text-color);
 }
 
 .footer-section h4 {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #000;
+    color: var(--primary-text-color);
 }
 
 .footer-section p {
@@ -41,7 +55,7 @@
 }
 
 .footer-section ul li a {
-    color: #333;
+    color:var(--primary-text-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -59,7 +73,7 @@
 }
 
 .social-links a {
-    color: #333; 
+    color: var(--primary-text-color); 
     font-size: 1.5rem;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);   
     transition: all 0.3s ease;

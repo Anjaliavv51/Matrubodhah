@@ -1,7 +1,19 @@
+:root{
+  --primary-text-color:#38393a;
+  --secondary-text-color:#926f57;
+  
+}
+
+.dark-mode{
+  --bg-shade:rgb(59, 59, 59);
+  --primary-text-color:rgb(238, 234, 234);
+  
+
+}
 /* Content Section Base Styles */
 .content-section {
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: var(--bg-shade);
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -23,7 +35,7 @@
 
 .roadmap-card {
   flex: 1;
-  background-color: #fff;
+  background-color: var(--bg-shade);
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
@@ -33,6 +45,7 @@
   min-width: 300px;
   max-width: 400px;
   transition: all 0.3s ease;
+  border: var(--primary-text-color) 5px solid;
 }
 
 .roadmap-card img {
@@ -48,14 +61,14 @@
   font-size: 1.8rem;
   margin: 1rem 0;
   text-align: center;
-  color: #333;
+  color: var(--primary-text-color);
 }
 
 .roadmap-card p {
   font-size: 1.1rem;
   line-height: 1.6;
   text-align: center;
-  color: #666;
+  color: var(--primary-text-color);
   flex-grow: 1;
 }
 
