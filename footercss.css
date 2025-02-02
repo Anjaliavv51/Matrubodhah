@@ -1,15 +1,29 @@
-
+:root{
+    --bg-shade: #f9f1f8;
+    --primary-text-color:#38393a;
+    --secondary-text-color:rgb(238, 234, 234);
+  
+  }
+  
+  .dark-mode{
+    --bg-shade:rgb(82, 82, 82);
+    --primary-text-color:rgb(238, 234, 234);
+    --secondary-text-color:#38393a;
+     
+  
+  }
 /* ========================
    Footer Section
    ======================== */
 .main-footer {
-  background-color: #f8f8f8;
+  background-color: var(--bg-shade);
   padding: 4rem 5%;
-  color: #333;
+  color: var(--primary-text-color);
   font-family: 'Arial', sans-serif;
   border-top: 3px solid #E5A186;
    border-top-left-radius: 50px;
    border-top-right-radius: 50px;
+   border:5px solid var(--primary-text-color);
 }
 
 .footer-content {
@@ -22,13 +36,13 @@
 .footer-section h3 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: #000;
+  color: var(--primary-text-color);
 }
 
 .footer-section h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  color: #000;
+  color: var(--primary-text-color);
 }
 
 .footer-section p {
@@ -47,7 +61,7 @@
 }
 
 .footer-section ul li a {
-  color: #333;
+  color: var(--primary-text-color);
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -65,7 +79,7 @@
 }
 
 .social-links a {
-  color: #333;
+  color: var(--primary-text-color);
   font-size: 1.5rem;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
@@ -151,14 +165,14 @@ form::before {
    bottom: 0;
    left: 0%;  /* Adjust this value to control the starting point of the border */
    width: 92%;  /* Adjust this value to control the length of the border */
-   border-bottom: 1px solid #333;  /* border color */
+   border-bottom: 1px solid var(--primary-text-color);  /* border color */
 }
 
 form input{
    width:85%;
    padding: 5px;
    background: transparent;
-   color: #333;
+   color: var(--primary-text-color);
    border: 0;
    outline: none;
 }
@@ -171,7 +185,7 @@ form button{
 form button .fas{
   font-size: 16px;
   padding: 10px 20px;
-  color: #333;
+  color: var(--primary-text-color);
 }
 
 .main-footer .footer-content {
@@ -241,7 +255,7 @@ h4 {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #fff;
+    color:var(--secondary-text-color);
     background: linear-gradient(90deg, #5592ed 0%, #ec8926 100%);
     border-radius: 25px;
     text-decoration: none;

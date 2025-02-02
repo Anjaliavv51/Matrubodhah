@@ -1,14 +1,29 @@
+:root{
+  --bg-shade: #f9f1f8;
+  --primary-text-color:#38393a;
+  --secondary-text-color:rgb(238, 234, 234);
+
+}
+
+.dark-mode{
+  --bg-shade:rgb(82, 82, 82);
+  --primary-text-color:rgb(238, 234, 234);
+  --secondary-text-color:#38393a;
+   
+
+}
+
 /* Content Section Base Styles */
 .content-section {
   padding: 50px 0;
-  background-color: #f9f9f9;
+  background-color: var(--bg-shade);
 }
 
 .section-title {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 40px;
-  color: #333;
+  color: var(--primary-text-color);
 }
 
 .roadmap {
@@ -33,11 +48,12 @@
 .roadmap-card {
   flex: 0 0 calc(33.333% - 20px);
   max-width: 400px;
-  background: white;
+  background: var(--bg-shade);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 5px solid var(--primary-text-color);
 }
 
 .roadmap-card:hover {
@@ -54,13 +70,13 @@
 .roadmap-card h3 {
   font-size: 1.5rem;
   margin: 15px;
-  color: #333;
+  color: var(--primary-text-color);
 }
 
 .roadmap-card .card-text {
   padding: 0 15px;
   margin-bottom: 20px;
-  color: #666;
+  color: var(--primary-text-color);
   font-size: 0.95rem;
   line-height: 1.6;
   max-height: 96px;
@@ -79,7 +95,7 @@
   margin: 15px;
   padding: 10px;
   background-color: #e5a186;
-  color: white;
+  color: var(--secodary-text-color);
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -95,7 +111,7 @@
 #roadmapCarousel .carousel-control-next {
   width: 50px;
   height: 50px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color:var(--bg-shade);
   border-radius: 50%;
   top: 50%;
   transform: translateY(-50%);

@@ -1,10 +1,34 @@
+
+:root{
+  --bg-shade: #f9f1f8;
+  --primary-text-color:#38393a;
+  --secondary-text-color:rgb(238, 234, 234);
+
+}
+
+.dark-mode{
+  --bg-shade:rgb(82, 82, 82);
+  --primary-text-color:rgb(238, 234, 234);
+  --secondary-text-color:#38393a;
+   
+
+}
+
+
+#mode{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
 body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--bg-shade);
+  color: var(--primary-text-color);
   box-sizing: border-box;
+  border: var(--primary-text-color) 5px solid;
 }
 html {
   scroll-behavior: smooth;
@@ -16,8 +40,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-shade);
+  box-shadow: 0 2px 4px var(--primary-text-color);
   z-index: 10;
 }
 
@@ -27,12 +51,13 @@ nav {
   gap: 5px;
   align-items: center;
   padding: 10px 5%;
+  border: 5px solid var(--primary-text-color);
 }
 
 .logo {
   font-size: 30px;
   font-weight: bold;
-  color: black;
+  color: var(--primary-text-color);
   flex: 1;
   text-align: left;
   text-decoration: none;
@@ -67,7 +92,7 @@ nav {
 
 .nav-links a {
   text-decoration: none;
-  color: black;
+  color: var(--primary-text-color);
   font-weight: bold;
   position: relative;
   transition: color 0.3s ease;
@@ -99,7 +124,7 @@ nav {
 .nav-links .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
+  background-color: var(--bg-shade);
   min-width: 160px;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
   z-index: 1;
@@ -108,7 +133,7 @@ nav {
 }
 
 .nav-links .dropdown-content a {
-  color: black;
+  color: var(--primary-text-color);
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -127,7 +152,7 @@ nav {
 .btn-contact:is(:focus, :hover) {
   background-color: #e5a186;
   border-color: #e5a186;
-  color: white;
+  color: var(--secondary-text-color);
   transform: scale(1.1);
 }
 @media (max-width: 768px) {
@@ -171,43 +196,30 @@ nav {
 
 
 /* Hero Section */
-.hero {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  padding: 0 5%;
-  margin-top: 80px; */
-  /* background: url("/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg")
-    no-repeat center/cover; */
-  /* position: relative;
-  z-index: 1; */
-}
 
 .hero h1 {
   font-size: 70px;
   font-weight: bold;
-  color: white;
+  color: var(--secondary-text-color);
   margin-top: 0;
 }
 
 .hero p {
   font-size: 18px;
   margin: 10px 0;
-  color: white;
+  color: var(--secondary-text-color);
   font-weight: bold;
 }
 
 .hero h2 {
   font-size: 25px;
-  color: white;
+  color: var(--secondary-text-color);
   font-weight: bolder;
 }
 
 .btn {
-  background-color: white;
-  color: black;
+  background-color: var(--bg-shade);
+  color: var(--primary-text-color);
   padding: 10px 20px;
   text-decoration: none;
   font-size: 18px;
@@ -219,7 +231,7 @@ nav {
 .btn:is(:focus, :hover) {
   background-color: #e5a186;
   border-radius: #e5a186;
-  color: white;
+  color: var(--secondary-text-color);
 }
 
 /* Wisdom Section */
@@ -229,7 +241,7 @@ nav {
   align-items: center;
   padding: 50px 5%;
   box-sizing: border-box;
-  background-color: white;
+  background-color: var(--bg-shade);
   margin-top: 50px;
 }
 
@@ -242,25 +254,25 @@ nav {
 
 .wisdom-content h1 {
   font-size: 46px;
-  color: black;
+  color: var(--primary-text-color);
   margin-bottom: 20px;
 }
 
 .wisdom-content h2 {
   font-size: 36px;
-  color: black;
+  color: var(--primary-text-color);
   margin-bottom: 20px;
 }
 
 .wisdom-content p {
   font-size: 18px;
-  color: #333;
+  color: var(--primary-text-color);
   line-height: 1.6;
   margin-bottom: 20px;
 }
 
 .wisdom-content a {
-  color: black;
+  color: var(--primary-text-color);
   text-decoration: none;
   border-radius: 0;
   margin-top: 10px;
@@ -298,18 +310,7 @@ nav {
   border-radius: 10px;
 }
 /* Adjust carousel image height */
-.hero-duplicate{
-     /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 0 5%;
-    margin-top: 80px; 
-    /* background: url('/WhatsApp\ Image\ 2024-09-24\ at\ 01.04.26_9c5f6797.jpg') no-repeat center/cover; */
-    /* z-index: 1;  */
 
-}
 .carousel-item{
     position: relative;
      display: flex;
@@ -339,7 +340,7 @@ nav {
     transform: translate(-50%, -50%);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: #fff;
+    color: var(--secondary-text-color);
     text-align: center;
     background: rgba(0, 0, 0, 0.5); /*Semi-transparent background for better readability */
     border-radius: 10px;
@@ -349,7 +350,7 @@ nav {
 .carousel_caption h1 {
     font-size: 4rem;
     font-weight: bold;
-    color: white;
+    color: var(--secondary-text-color);
     margin-top: 0;
     word-wrap: break-word;
 }
@@ -357,7 +358,7 @@ nav {
 /* Subtitle styling */
 .carousel_caption h2 {
     font-size: 1.5rem;
-    color: white;
+    color: var(--secondary-text-color);
     font-weight: bolder;
     word-wrap: break-word;
     
@@ -365,8 +366,8 @@ nav {
 
 /* Button styling */
 .carousel_caption .btn {
-    background-color: white;
-    color: black;
+    background-color: var(--bg-shade);
+    color: var(--primary-text-color);
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
@@ -378,7 +379,7 @@ nav {
 .carousel_caption .btn:is(:hover, :focus) {
   background-color: #E5A186;
     border-radius: #E5A186;
-    color: white;
+    color: var(--secondary-text-color);
 }
 
 @media (max-width: 992px) and (min-width: 768px) {
@@ -456,7 +457,7 @@ nav {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
+    background: var(--bg-shade);
     padding: 20px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
@@ -614,7 +615,7 @@ nav {
 .inner-circle {
     width: 45px;
     height: 45px;
-    background: white;
+    background: var(--bg-shade);
     border-radius: 50%;
     display: flex;
     align-items: center;
