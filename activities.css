@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f7f7f1;
+    background-color: var(--bg-shade);
     font-family: "Arial", sans-serif;
     height: 100vh;
 }
@@ -20,14 +20,22 @@ body {
   
   }
 
+
+  #mode{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
 header {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 1);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--bg-shade);
+    box-shadow: 0 2px 4px var(--primary-text-color);
     z-index: 10;
     margin-bottom: 50px;
 }
@@ -48,7 +56,7 @@ nav {
 .logo {
     font-size: 30px;
     font-weight: bold;
-    color: black;
+    color: var(--primary-text-color);
     flex: 1;
     text-align: left;
     text-decoration: none;
@@ -57,7 +65,7 @@ nav {
 }
 
 .logo:hover {
-    color: rgb(106, 97, 97);
+    color: var(--primary-text-color);
 }
 
 .nav-links {
@@ -83,7 +91,7 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: black;
+    color: var(--primary-text-color);
     font-weight: bold;
     position: relative;
     transition: color 0.3s ease;
@@ -115,16 +123,16 @@ nav {
 .nav-links .dropdown-content {
     display: none;
     position: absolute;
-    background-color: white;
+    background-color: var(--bg-shade);
     min-width: 160px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 16px var(--primary-text-color);
     z-index: 1;
     list-style: none;
     padding: 0;
 }
 
 .nav-links .dropdown-content a {
-    color: black;
+    color: var(--primary-text-color);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -135,13 +143,13 @@ nav {
 }
 
 .nav-links .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: var(--bg-shade);
 }
 
 .btn-contact:is(:focus, :hover) {
     background-color: #e5a186;
     border-color: #e5a186;
-    color: white;
+    color: var(--primary-text-color);
     transform: scale(1.1);
 }
 
@@ -197,6 +205,7 @@ nav {
     max-width: 100%;
     height: auto;
     border-radius: 15px;
+    border: 5px solid var(--primary-text-color);
 }
 
 .content-container {
@@ -210,13 +219,13 @@ nav {
 }
 
 .description {
-    color: #333;
+    color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.6;
 }
 
 .upcoming {
-    color: #333;
+    color: var(--primary-text-color);
     font-size: 16px;
     margin-top: 15px;
     line-height: 1.5;
@@ -271,7 +280,7 @@ button {
     padding: 12px 27px;
     border-radius: 12px;
     font-size: 1.1rem;
-    color: white;
+    color: var(--primary-text-color);
     background: #e5a186;
     will-change: transform;
     transform: translateY(-4px);
