@@ -1,6 +1,20 @@
+:root{
+  --bg-shade: #f9f1f8;
+  --primary-text-color:#38393a;
+  --secondary-text-color:rgb(238, 234, 234);
+
+}
+
+.dark-mode{
+  --bg-shade:rgb(82, 82, 82);
+  --primary-text-color:rgb(238, 234, 234);
+  --secondary-text-color:#38393a;
+   
+
+}
 /* Contact Form */
 .contact-form {
-    background: white;
+    background:var(--bg-shade);
     width: 90%;
     max-width: 700px;
     padding: 20px;
@@ -9,12 +23,14 @@
     margin-top: 100px;
     margin-bottom: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--primary-text-color);
+    box-shadow: 0 0 10px var(--primary-text-color);
   }
   
   .contact-form h1 {
+    color: var(--primary-text-color);
     text-align: center;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    
   }
   
   .form-group {
@@ -26,13 +42,14 @@
     display: block;
     margin-bottom: 5px;
     font-weight: 500;
+    color: var(--primary-text-color);
   }
   
   .contact-form input,
   .contact-form textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--primary-text-color);
     border-radius: 4px;
     box-sizing: border-box;
   }
@@ -48,7 +65,7 @@
   
   .contact-form button {
     background-color: #e5a186;
-    color: white;
+    color: var(--secondary-text-color);
     border: none;
     font-size: 20px;
     width: 100%;
@@ -60,9 +77,12 @@
   
   .contact-form button:hover {
     background-color: #f6a07e;
-    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 4px 4px 4px var(--primary-text-color);
   }
-  
+
+  .footer{
+    color: var(--primary-text-color);
+  }  
   @media (max-width: 768px) {
     .contact-form {
       width: 90%;

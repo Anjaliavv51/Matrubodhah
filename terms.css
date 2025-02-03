@@ -3,17 +3,33 @@
     --secondary-color: #FFA07A;
     --text-color: #333;
     --background-color: #FFF5EE;
-    --accent-color: #8B4513;
+    
     --highlight-color: #FFD700;
 }
+:root{
+    --bg-shade: #f9f1f8;
+    --primary-text-color:#38393a;
+    --secondary-text-color:rgb(238, 234, 234);
+    --accent-color: #8B4513;
+  
+  }
+  
+  .dark-mode{
+    --bg-shade:rgb(82, 82, 82);
+    --primary-text-color:rgb(238, 234, 234);
+    --secondary-text-color:#38393a;
+    --accent-color: #eb7d2e;
+     
+  
+  }
 
 
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    background-color: var(--bg-shade);
     transition: background-color 0.3s ease;
 }
 
@@ -38,17 +54,18 @@ h3 {
 }
 
 .section {
-    background-color: white;
+    background-color: var(--bg-shade);
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--primary-text-color);
+    box-shadow: 0 4px 6px var(--primary-text-color);
     margin-bottom: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 8px var(--primary-text-color);
 }
 
 p {
@@ -58,7 +75,7 @@ p {
 
 .highlight {
     background-color: var(--highlight-color);
-    color: var(--text-color);
+    color: var(--primary-text-color);
     padding: 2px 5px;
     border-radius: 3px;
 }
@@ -87,7 +104,7 @@ ul {
 .footer {
     
     font-size: 0.8rem;
-    color: #636363;
+    color: var(--primary-text-color);
     text-align: center;
     
     bottom: 10px;

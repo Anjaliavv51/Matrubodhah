@@ -6,6 +6,20 @@ body {
     color: black;
     box-sizing: border-box;
 }
+:root{
+    --bg-shade: #f9f1f8;
+    --primary-text-color:#38393a;
+    --secondary-text-color:rgb(238, 234, 234);
+  
+  }
+  
+  .dark-mode{
+    --bg-shade:rgb(82, 82, 82);
+    --primary-text-color:rgb(238, 234, 234);
+    --secondary-text-color:#38393a;
+     
+  
+  }
 html{
     scroll-behavior: smooth;
 }
@@ -29,7 +43,7 @@ html{
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: black;
+    color:var(--primary-text-color);
     font-weight: 900;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -40,7 +54,8 @@ html{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--bg-shade);
+    border: 5px solid var(--primary-text-color);
     display: flex;
     justify-content: center;
     align-items: center;

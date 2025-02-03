@@ -1,26 +1,41 @@
+:root{
+    --bg-shade: #f9f1f8;
+    --primary-text-color:#38393a;
+    --secondary-text-color:rgb(238, 234, 234);
+  
+  }
+  
+  .dark-mode{
+    --bg-shade:rgb(82, 82, 82);
+    --primary-text-color:rgb(238, 234, 234);
+    --secondary-text-color:#38393a;
+     
+  
+  }
 /* styles.css */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin-top:100px;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--bg-shade);
     font-size: 1rem;
 }
 
 .faq-container {
     width: 1000px;
-    margin-top:100vh;
+    margin-top: 600px;
     margin-bottom: 50px;
     padding: 20px;
-    background: #fff;
+    background: var(--bg-shade);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--primary-text-color);
+    box-shadow: 0 0 10px var(--primary-text-color);
 }
 
 h1 {
     text-align: center;
-    color: #333;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: var(--primary-text-color);
+    text-shadow: 2px 2px 2px var(--primary-text-color);
     margin-top: 10px;
     margin-bottom: 70px;
     font-weight: 700;
@@ -34,16 +49,16 @@ h1 {
 .faq-question {
     cursor: pointer;
     padding: 1rem;
-    background: #e2e2e2;
+    background: var(--bg-shade);
     border-radius: 5px;
-    color: #333;
+    color: var(--primary-text-color);
     transition: background-color 0.3s, color 0.3s;
     font-size: 1.1rem;
 }
 
 .faq-question:hover {
     background-color: #e5a186;
-    color: #fff;
+    color: var(--secondary-text-color);
 }
 
 .faq-answer {
@@ -51,7 +66,7 @@ h1 {
     overflow: hidden;
     transition: max-height 0.5s ease-out, padding 0.5s ease-out;
     padding: 0 1rem;
-    background: #f9f9f9;
+    background: var(--bg-shade);
     border-left: 4px solid #e5a186;
     margin-top: 5px;
     border-radius: 5px;

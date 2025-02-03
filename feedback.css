@@ -2,8 +2,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    color: black;
+    background-color:var(--bg-shade);
+    color: var(--primary-text-color);
     box-sizing: border-box;
     background-image: url('image.png');
     background-attachment: fixed;
@@ -21,8 +21,9 @@ html {
  
 }
 .container{
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
+    background-color: var(--bg-shade);
+    border-radius: 15px;
+    border: 10px solid var(--primary-text-color);
     width: 60vw;
     display: flex;
     flex-direction: column;
@@ -53,7 +54,7 @@ html {
     display: flex;
     align-items: center;
     padding: 6px 4px 6px 4px;
-    border: 1px solid black;
+    border: 3px solid var(--primary-text-color);
     border-radius: 4px;
     cursor: pointer;
     height: 30px;
@@ -69,15 +70,15 @@ button{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: var(--primary-text-color);
 }
 .btn:hover{
    cursor: pointer;
-   background-color: white;
+   background-color: var(--bg-shade);
 }
 button:hover{
     background-color: #E5A186;
-    color: white;
+    color: var(--primary-text-color);
     border: none;
     border-radius: 4px;
 }

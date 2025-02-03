@@ -1,4 +1,17 @@
+:root{
+  --bg-shade: #f9f1f8;
+  --primary-text-color:#38393a;
+  --secondary-text-color:rgb(238, 234, 234);
 
+}
+
+.dark-mode{
+  --bg-shade:rgb(82, 82, 82);
+  --primary-text-color:rgb(238, 234, 234);
+  --secondary-text-color:#38393a;
+   
+
+}
 .wisdom-section .wisdom-content {
     opacity: 0;
     transform: translateY(50px);

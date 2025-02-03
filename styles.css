@@ -21,7 +21,7 @@
   border-radius: 50%;
   cursor: pointer;
 }
-body:not(.dark-mode) {
+body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
@@ -144,7 +144,7 @@ nav {
 }
 
 .nav-links .dropdown-content a:hover {
-  background-color: var(--bg-shade);
+  background-color: #f1f1f1;
 }
 
 
@@ -202,13 +202,12 @@ nav {
   font-weight: bold;
   color: var(--secondary-text-color);
   margin-top: 0;
-  display: block !important;
 }
 
 .hero p {
   font-size: 18px;
   margin: 10px 0;
-  color: var(--secondary-text-color) !important;
+  color: var(--secondary-text-color);
   font-weight: bold;
 }
 
@@ -243,7 +242,7 @@ nav {
   padding: 50px 5%;
   box-sizing: border-box;
   background-color: var(--bg-shade);
-
+  margin-top: 50px;
 }
 
 .wisdom-content {
@@ -498,7 +497,6 @@ nav {
     padding: 20px;
     text-align: center;
     margin-top: 60px;
-    
   }
 
   .hero h1 {
