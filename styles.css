@@ -144,7 +144,7 @@ nav {
 }
 
 .nav-links .dropdown-content a:hover {
-  background-color: #f1f1f1;
+  background-color: var(--bg-shade);
 }
 
 
@@ -242,7 +242,7 @@ nav {
   padding: 50px 5%;
   box-sizing: border-box;
   background-color: var(--bg-shade);
-  margin-top: 50px;
+
 }
 
 .wisdom-content {
