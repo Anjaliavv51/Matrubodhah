@@ -5,6 +5,7 @@ body {
     background-color: #fff;
     color: black;
     box-sizing: border-box;
+    background-image: url("image.png");
 }
 html{
     scroll-behavior: smooth;

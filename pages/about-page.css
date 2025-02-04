@@ -2,32 +2,52 @@
     margin: 0;
     padding: 0;
 }
-header {
+.header {
+  background-color: white;
   padding: 20px;
-  background-color: #f9f9f9; /* Light background */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
+  gap: 30px;
 }
-/* Styling for the link */
-header a {
+
+.back-link {
+  color: #333;
   text-decoration: none;
-  font-size: 14px; /* Slightly larger font for better readability */
-  font-weight: 600;
-  font-family: 'Arial', sans-serif;
-  padding: 10px 15px; /* Add more padding for a comfortable click area */
-  background-color: #e4e4e4; /* Neutral background */
-  color: #333; /* Darker text for contrast */
-  border-radius: 5px; /* Rounded corners for a modern look */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the button */
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+  transition: color 0.3s ease;
 }
-/* Hover effect for the link */
-header a:hover {
-  background-color: #cfcfcf; /* Slightly darker background on hover */
-  transform: scale(1.05); /* Slightly enlarge for emphasis */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+
+.back-link:hover {
+  color: #e5a186;
 }
+
+.logo-heading {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.heading-logo {
+  height: 80px;
+  width: auto;
+  rotate: 23deg;
+  transform: scale(2);
+  transform-origin: center;
+}
+
+.logo-heading h1 {
+  font-size: 46px;
+  color: black;
+  margin: 0;
+}
+
 .wisdom-section {
     display: flex;
     justify-content: space-between;

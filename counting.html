@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp">
+    <link rel="icon" href="Om-logo.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>मातृबोधः</title>
+    <title>मातृबोधः - Learn Counting</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="animations.css">
     <link rel="stylesheet" href="scontentcss.css">
@@ -15,11 +15,13 @@
 <body>
     <header>
         <nav>
-            <!-- Wrap the logo text in an anchor tag -->
-            <a href="index.html" class="logo">मातृबोधः</a>
+            <a href="index.html" class="logo">
+                <img src="Om-logo.png" alt="मातृबोधः" class="logo-image">
+                <span class="logo-text">मातृबोधः</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#wisdom">About</a></li>
+                <li><a href="pages/about-page.html">About</a></li>
                 <li class="dropdown">
                     <a href="#">Content</a>
                     <ul class="dropdown-content">
@@ -31,152 +33,167 @@
                 </li>
                 <li><a href="login.html">Login</a></li>
                 <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html" >Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
             <div class="toggle-menu">☰</div>
         </nav>
     </header>
-    <div class="game-container"></div>
+
+    <div class="instructions">
+        <h3>Learn Sanskrit Numbers</h3>
+        <p>Click on the lotus flowers to learn counting in Sanskrit. Listen to the pronunciation and practice!</p>
+    </div>
+
+    <div class="progress-container">
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+    </div>
+
+    <div class="game-container">
         <!-- Lotus buttons will be dynamically added here -->
     </div>
+
     <div class="counting">
-        <h2>Counting Practice</h2>
-        <p>Practice counting here...</p>
+        <h2>संस्कृत संख्या</h2>
+        <p>Learn and practice Sanskrit numbers</p>
     </div>
 
-    <!-- Updated Footer Section --> 
-<footer class="main-footer">
-  <div class="footer-content">
-    <div class="footer-section">
-      <h3>मातृबोधः</h3>
-      <p>
-        Educating children through India's timeless wisdom and cultural
-        heritage.
-      </p>
-      <div class="social-links">
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Facebook"
-          ><i class="fab fa-facebook"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Twitter"
-          ><i class="fab fa-twitter"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Instagram"
-          ><i class="fab fa-instagram"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="YouTube"
-          ><i class="fab fa-youtube"></i
-        ></a>
-        <a
-          href="https://github.com/Anjaliavv51/Matrubodhah"
-          target="_blank"
-          aria-label="Linkedin"
-          ><i class="fa-brands fa-linkedin-in"></i
-        ></a>
-      </div>
-
-      <!-- GitHub Star Button -->
-      <div class="github-star">
-        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">
-          <i class="fab fa-github"></i> Star on GitHub
-        </a>
-      </div>
+    <div class="audio-control">
+        <i class="fas fa-volume-up"></i>
     </div>
 
-    <div class="footer-section">
-      <h4>Quick Links <div class="underline"><span></span></div></h4>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#wisdom">About Us</a></li>
-        <li><a href="#content">Our Courses</a></li>
-        <li><a href="#hero">Contact</a></li>
-      </ul>
-    </div>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>मातृबोधः</h3>
+                <p>Educating children through India's timeless wisdom and cultural heritage.</p>
+                <div class="social-links">
+                    <a href="https://github.com/krish-gupta21/Matrubodhah" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://github.com/krish-gupta21/Matrubodhah" target="_blank" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://github.com/krish-gupta21/Matrubodhah" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/krish-gupta21/Matrubodhah" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://github.com/krish-gupta21/Matrubodhah" target="_blank" aria-label="Linkedin">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+            </div>
 
-    <div class="footer-section">
-      <h4>Learning Paths <div class="underline"><span></span></div></h4>
-      <ul>
-        <li><a href="countingpage.html">Counting</a></li>
-        <li><a href="#hero">Days</a></li>
-        <li><a href="#hero">Activities</a></li>
-      </ul>
-    </div>
+            <div class="footer-section">
+                <h4>Quick Links <div class="underline"><span></span></div></h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/about-page.html">About Us</a></li>
+                    <li><a href="#content">Our Courses</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
 
-    <div class="footer-section">
-      <h4>Newsletter <div class="underline"><span></span></div></h4>
-      <form>
-        <i class="fas fa-envelope"></i>
-        <input type="email" placeholder="Enter your email id" required>
-        <button type="submit"><i class="fas fa-arrow-right"></i></button>
-      </form>
-      <br>
-      <h4>Contact Us <div class="underline"><span></span></div></h4>
-      <ul class="contact-info">
-        <li>
-          <i class="fas fa-envelope"></i
-          ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
-        </li>
-        <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <p>
-      &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
-      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
-        >@Sakthi</a
-      >
-    </p>
-  </div>
-</footer>
+            <div class="footer-section">
+                <h4>Learning Paths <div class="underline"><span></span></div></h4>
+                <ul>
+                    <li><a href="countingpage.html">Counting</a></li>
+                    <li><a href="#">Days</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                </ul>
+            </div>
 
-    
-    <script src="scrollscript.js"></script>
-    <script src="audio.js"></script>
+            <div class="footer-section">
+                <h4>Contact Us <div class="underline"><span></span></div></h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
+                    </li>
+                    <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
+                <a href="https://github.com/krish-gupta21/Matrubodhah" target="_blank">@Krish</a>
+            </p>
+        </div>
+    </footer>
+
     <script>
+        const sanskritNumbers = {
+            1: 'एकम्',
+            2: 'द्वे',
+            3: 'त्रीणि',
+            4: 'चत्वारि',
+            5: 'पञ्च',
+            6: 'षट्',
+            7: 'सप्त',
+            8: 'अष्ट',
+            9: 'नव',
+            10: 'दश'
+        };
+
         const gameContainer = document.querySelector('.game-container');
-        const blast = document.querySelector('.blast');
+        const countingDisplay = document.querySelector('.counting');
+        const progressBar = document.querySelector('.progress');
+        const audioControl = document.querySelector('.audio-control');
+        let isSoundEnabled = true;
+        let progress = 0;
 
         function createLotus(number) {
             const lotus = document.createElement('div');
             lotus.className = 'lotus';
-            lotus.innerHTML = `
-                <div class="petal" style="transform: rotate(0deg)"></div>
-                <div class="petal" style="transform: rotate(72deg)"></div>
-                <div class="petal" style="transform: rotate(144deg)"></div>
-                <div class="petal" style="transform: rotate(216deg)"></div>
-                <div class="petal" style="transform: rotate(288deg)"></div>
-                ${number}
-            `;
+            lotus.textContent = number;
+
+            const sanskritNumber = document.createElement('div');
+            sanskritNumber.className = 'sanskrit-number';
+            sanskritNumber.textContent = sanskritNumbers[number];
+            lotus.appendChild(sanskritNumber);
+
             lotus.addEventListener('click', () => {
-                lotus.classList.add('open');
+                countingDisplay.classList.add('show');
+                countingDisplay.querySelector('h2').textContent = sanskritNumbers[number];
+                countingDisplay.querySelector('p').textContent = `${number} in Sanskrit is "${sanskritNumbers[number]}"`;
+                
+                if (isSoundEnabled) {
+                    // Play the corresponding audio file
+                    const audio = new Audio(`assets/audio/sanskrit_${number}.mp3`);
+                    audio.play();
+                }
+
+                // Update progress
+                progress = (number / 10) * 100;
+                progressBar.style.width = `${progress}%`;
+
                 setTimeout(() => {
-                    blast.classList.add('show');
-                    setTimeout(() => {
-                        blast.classList.remove('show');
-                        lotus.classList.remove('open');
-                    }, 1500);
-                }, 300);
+                    countingDisplay.classList.remove('show');
+                }, 2000);
             });
+
             return lotus;
         }
 
+        // Create lotus buttons
         for (let i = 1; i <= 10; i++) {
             gameContainer.appendChild(createLotus(i));
         }
-        
+
+        // Toggle sound
+        audioControl.addEventListener('click', () => {
+            isSoundEnabled = !isSoundEnabled;
+            audioControl.querySelector('i').className = isSoundEnabled ? 'fas fa-volume-up' : 'fas fa-volume-mute';
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.toggle-menu').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
     </script>
-    <script src="index.js"></script>
 </body>
 </html>

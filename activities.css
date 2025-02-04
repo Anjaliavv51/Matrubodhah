@@ -32,6 +32,9 @@ nav {
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 30px;
     font-weight: bold;
     color: black;
@@ -40,11 +43,25 @@ nav {
     text-decoration: none;
     cursor: pointer;
     transition: color 0.3s ease;
-}
-
-.logo:hover {
+  }
+  
+  .logo-image {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    rotate: 23deg;
+    transform: scale(2);
+    transform-origin: center;
+  }
+  
+  .logo-text {
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  .logo:hover {
     color: rgb(106, 97, 97);
-}
+  }
 
 .nav-links {
     list-style: none;
