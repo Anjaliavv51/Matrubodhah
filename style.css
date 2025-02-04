@@ -23,6 +23,10 @@
 .click{
     color: blue;
 }
+.click:hover{
+    text-decoration: underline;
+    color:red;
+}
 body{
     font-family: 'Montserrat',sans-serif;
     background: var(--bg-shade);
@@ -203,3 +207,16 @@ a{
     bottom: 10px;
     width: 100%;
 }
+
+.sign-up-button{
+
+    background-color:#e5a186;
+    color:#eee;
+}
+
+.sign-in-button{
+
+    background-color:#e5a186;
+    color:#eee;
+}
+
