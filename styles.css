@@ -28,7 +28,7 @@ body {
   background-color: var(--bg-shade);
   color: var(--primary-text-color);
   box-sizing: border-box;
-  border: var(--primary-text-color) 5px solid;
+  
 }
 html {
   scroll-behavior: smooth;
@@ -51,7 +51,6 @@ nav {
   gap: 5px;
   align-items: center;
   padding: 10px 5%;
-  border: 5px solid var(--primary-text-color);
 }
 
 .logo {
@@ -207,7 +206,7 @@ nav {
 .hero p {
   font-size: 18px;
   margin: 10px 0;
-  color: var(--secondary-text-color);
+  color: white;
   font-weight: bold;
 }
 
@@ -340,7 +339,7 @@ nav {
     transform: translate(-50%, -50%);
     padding-top: 1rem;
     padding-bottom: 1rem;
-    color: var(--secondary-text-color);
+    color: white;
     text-align: center;
     background: rgba(0, 0, 0, 0.5); /*Semi-transparent background for better readability */
     border-radius: 10px;
@@ -350,7 +349,7 @@ nav {
 .carousel_caption h1 {
     font-size: 4rem;
     font-weight: bold;
-    color: var(--secondary-text-color);
+    color: white;
     margin-top: 0;
     word-wrap: break-word;
 }
@@ -358,7 +357,7 @@ nav {
 /* Subtitle styling */
 .carousel_caption h2 {
     font-size: 1.5rem;
-    color: var(--secondary-text-color);
+    color: white;
     font-weight: bolder;
     word-wrap: break-word;
     
@@ -366,8 +365,8 @@ nav {
 
 /* Button styling */
 .carousel_caption .btn {
-    background-color: var(--bg-shade);
-    color: var(--primary-text-color);
+    background-color: black;
+    color: white;
     padding: 10px 20px;
     text-decoration: none;
     font-size: 18px;
@@ -379,7 +378,7 @@ nav {
 .carousel_caption .btn:is(:hover, :focus) {
   background-color: #E5A186;
     border-radius: #E5A186;
-    color: var(--secondary-text-color);
+    color: white;
 }
 
 @media (max-width: 992px) and (min-width: 768px) {

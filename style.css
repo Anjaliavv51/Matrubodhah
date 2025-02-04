@@ -59,7 +59,6 @@ p{
     width: 768px;
     max-width: 100%;
     min-height: 480px;
-    border: 5px solid var(--primary-text-color);
     margin-bottom: 130px;
 
 }
