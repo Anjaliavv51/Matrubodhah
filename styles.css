@@ -609,6 +609,7 @@ nav {
     align-items: center;
     justify-content: center;
     transition: background 0.3s ease;
+    bottom: 5px;
 }
 
 .inner-circle {

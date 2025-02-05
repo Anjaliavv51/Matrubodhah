@@ -13,27 +13,7 @@
     <link rel="stylesheet" href="scontentcss.css">
     <link rel="stylesheet" href="footercss.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        /* Scroll to Top Button */
-        #scrollToTopBtn {
-            display: none;
-            position: fixed;
-            bottom: 132px;
-            right: 30px;
-            height: 55px;
-            width: 55px;
-            background-color: rgb(218, 128, 76);
-            color: white;
-            border: none;
-            border-radius: 50%;
-            padding: 10px;
-            cursor: pointer;
-            font-size: 15px;
-        }
-        #scrollToTopBtn:hover {
-            background-color: rgb(218, 128, 76);
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 </head>
 <body>
@@ -51,11 +31,13 @@
     />
   </head>
   <body>
-    <!-- Scroll -->
+    <!-- Scroll button-->
     <div id="scrollButton" class="hidden">
         <div class="outer-circle">
             <div class="inner-circle">
-                <div class="arrow">↑</div>
+                <div class="arrow">
+                  <i class="fas fa-arrow-up fa-xl"></i>
+                </div>
             </div>
         </div>
     </div>
@@ -356,12 +338,6 @@
       </div>
     </section>
     
-
-    <button id="scrollToTopBtn" onclick="scrollToTop()">
-      <i class="fas fa-arrow-up fa-xl"></i>
-    </button>
-
-    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
     <!-- Footer Section -->
     <footer class="main-footer">
     <div class="footer-content">
