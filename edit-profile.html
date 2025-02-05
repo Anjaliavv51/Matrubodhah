@@ -3,9 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-    This is edit profile page
+    <h1>Edit Profile</h1>
+    <form id="editProfileForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone">
+        
+        <button type="submit">Save Changes</button>
+    </form>
+    <script src="edit-profile.js"></script> 
 </body>
 </html>

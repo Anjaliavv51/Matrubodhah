@@ -98,4 +98,25 @@ const loginUser = async (req, res) => {
     }
 };
 
-export { registerUser, loginUser };
+
+const updateUser = async (req, res) => {
+    try {
+        const { userId } = req.params; 
+        const { name, email, phone } = req.body; 
+
+
+        const updatedUser = await User.findByIdAndUpdate(userId, { name, email, phone }, { new: true });
+
+        if (!updatedUser) {
+            return res.status(404).send({ error: "User not found" });
+        }
+
+        res.status(200).send({
+            success: "User details updated successfully",
+            user: updatedUser,
+        });
+    } catch (error) {
+        res.status(500).send({ error: "Server error during updating user details", details: error.message });
+    }
+};
+
