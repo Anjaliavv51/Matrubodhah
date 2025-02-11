@@ -179,7 +179,7 @@
                     }, index * 200);
                 });
 
-                document.getElementById('profile-pic').src = response.data.user.profilePicture || 'user-avatar.png';
+                document.getElementById('profile-pic').src = response.data.user.picture || 'user-avatar.png';
                 document.getElementById('username').textContent = response.data.user.username || 'Not Updated';
                 document.getElementById('name').textContent = response.data.user.name || response.data.user.username;
                 document.getElementById('location').textContent = response.data.user.location || 'Not Updated';
@@ -201,6 +201,11 @@
         const editbtn = document.getElementById("editbtn")
         editbtn.addEventListener("click", ()=>{
             window.location.href= "/edit-profile.html"
+        })
+    </script>
+    <script>
+        document.getElementById("editbtn").addEventListener("click",()=>{
+            window.location.href="/edit-profile.html"
         })
     </script>
 </body>

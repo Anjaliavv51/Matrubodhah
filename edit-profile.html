@@ -2,10 +2,253 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="DALL\u00b7E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>मातृबोधः</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="footercss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('image.png');
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+        }
+
+        .profile-container {
+            max-width: 600px;
+            margin: 150px auto;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transform: translateY(-50px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .profile-container.visible {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .profile-header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #f4f4f4;
+        }
+
+        .profile-header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 3px solid #0056b3;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .profile-header img:hover {
+            transform: scale(1.1);
+        }
+
+        .profile-details {
+            padding: 2rem;
+        }
+
+        .profile-details div {
+            margin-bottom: 1rem;
+            transform: translateX(-20px);
+            opacity: 0;
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+        }
+
+        .profile-details div.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        .profile-details label {
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        button {
+            display: block;
+            margin: 2rem auto;
+            padding: 0.5rem 2rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #0056b3;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #004099;
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-    This is edit profile page
+    <header>
+        <nav>
+            <!-- Wrap the logo text in an anchor tag -->
+            <a href="#hero" class="logo">मातृबोधः</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pages/about-page.html">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Content</a>
+                    <ul class="dropdown-content">
+                        <li><a href="countingpage.html">Counting</a></li>
+                        <li><a href="#">Days</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+                <li id="loginlist" ><a href="login.html">Login</a></li>
+                <li id="profilelist"><a  href="profile.html">Profile</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+            <div class="toggle-menu">☰</div>
+        </nav>
+    </header>
+    
+    <div class="profile-container">
+        <div class="profile-header">
+            <img id="profile-pic" src="" alt="Profile Picture">
+            <h2 id="username">Username</h2>
+        </div>
+        <div class="profile-details">
+            <div>
+                <label>Name:</label>
+                <input type="text" placeholder="Update your name" id="name">
+            </div>
+
+            <div>
+                <label>Updated Image:</label>
+                <input type="file">
+            </div>
+            <div>
+                <label>Age:</label>
+                <!-- <span id="age">Loading...</span> -->
+                 <input type="text" placeholder="Age" id="age">
+            </div>
+            <div>
+                <label>Email:</label>
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <div>
+                <label>Location:</label>
+                <input type="text" placeholder="location" id="location">
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" placeholder="YYYY-MM-DD">
+            </div>
+            
+        </div>
+        <div>
+            <button id="submitbtn">Update...</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.1/axios.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async () => {
+            const token = localStorage.getItem("token"); // Replace with the actual Bearer token
+
+            try {
+                const response = await axios.get('http://localhost:3000/api/v1/profile/getprofile', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`,
+                        'Content-Type': 'application/json'
+                    }
+                });
+                console.log(response.data)
+                document.querySelector('.profile-container').classList.add('visible');
+
+                document.querySelectorAll('.profile-details div').forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('visible');
+                    }, index * 200);
+                });
+
+                document.getElementById('profile-pic').src = response.data.user.picture || 'user-avatar.png';
+                document.getElementById('username').value = response.data.user.username || 'Not Updated';
+                document.getElementById('name').value = response.data.user.name || response.data.user.username;
+                document.getElementById('location').value = response.data.user.location || 'Not Updated';
+                document.getElementById('dob').value = response.data.user.dob || 'Not Updated';
+                document.getElementById('email').value = response.data.user.email || 'Not Updated';
+                document.getElementById('age').value = response.data.user.age || 'Not Updated';
+            } catch (error) {
+                console.error('Failed to fetch profile data:', error);
+            }
+        });
+
+        const logoutbtn = document.getElementById("logoutbtn");
+        logoutbtn.addEventListener("click", () => {
+            localStorage.removeItem("token");
+            window.location.href = "/";
+        });
+
+        const updatebtn = document.getElementById("editbtn")
+        editbtn.addEventListener("click", ()=>{
+
+        })
+    </script>
+    <script>
+        document.getElementById("editbtn").addEventListener("click",()=>{
+            window.location.href="/edit-profile.html"
+        })
+    </script>
+
+<script>
+    document.getElementById("submitbtn").addEventListener("click", async () => {
+        const token = localStorage.getItem("token"); // Retrieve the token
+
+        // Create FormData object
+        const formData = new FormData();
+        formData.append("name", document.getElementById("name").value);
+        formData.append("age", document.getElementById("age").value);
+        formData.append("email", document.getElementById("email").value);
+        formData.append("location", document.getElementById("location").value);
+        formData.append("dob", document.getElementById("dob").value);
+
+        // Get the selected image file
+        const imageFile = document.querySelector("input[type='file']").files[0];
+        if (imageFile) {
+            formData.append("image", imageFile);
+        }
+
+        try {
+            const response = await axios.post(
+                "http://localhost:3000/api/v1/profile/editprofile", // Your edit profile endpoint
+                formData,
+                {
+                    headers: {
+                        "Authorization": `Bearer ${token}`,
+                        "Content-Type": "multipart/form-data"
+                    }
+                }
+            );
+
+            alert("Profile updated successfully!");
+            window.location.href = "/profile.html"; // Redirect back to profile page
+        } catch (error) {
+            console.error("Error updating profile:", error);
+            alert("Failed to update profile. Please try again.");
+        }
+    });
+</script>
+
 </body>
 </html>
