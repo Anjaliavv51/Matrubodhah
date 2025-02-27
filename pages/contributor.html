@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="icon"
+      href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>मातृबोधः</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../animations.css">
+    <link rel="stylesheet" href="../scontentcss.css">
+    <link rel="stylesheet" href="../footercss.css">
+    <link rel="stylesheet" href="../pages/contributor.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- font awesome kit link -->
+    <script src="https://kit.fontawesome.com/422e4af3c2.js" crossorigin="anonymous"></script>
+    <style>
+        /* Scroll to Top Button */
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 132px;
+            right: 30px;
+            height: 55px;
+            width: 55px;
+            background-color: rgb(218, 128, 76);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: rgb(218, 128, 76);
+        }
+    </style>
+
+</head>
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  </head>
+  <body>
+    <!-- Scroll -->
+    <div id="scrollButton" class="hidden">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <div class="arrow">↑</div>
+            </div>
+        </div>
+    </div>
+    <header>
+      <nav>
+        <!-- Wrap the logo text in an anchor tag -->
+        <a href="#hero" class="logo">मातृबोधः</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about-page.html">About</a></li>
+            <li class="dropdown">
+                <a href="#">Content</a>
+                <ul class="dropdown-content">
+                    <li><a href="countingpage.html">Counting</a></li>
+                    <li><a href="#">Days</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+            </li>
+            <li id="loginlist" ><a href="login.html">Login</a></li>
+            <li id="profilelist"><a  href="profile.html">Profile</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html" >Contact</a></li>
+        </ul>
+        <div class="toggle-menu">☰</div>
+    </nav>
+
+    </header>
+    !-- Contributors Section -->
+<div class="container">
+  
+  
+  <!-- GitHub Stats -->
+  <div class="stats-container text-center">
+    <br>
+    <br>
+    <h3>मातृबोधः GitHub Statistics</h3>
+    <br>
+    <div class="row justify-content-center">
+      <div class="col-md-3 col-sm-6 stat-box">
+        <h4>Contributors</h4>
+        <p id="contributors-count" style="color: white;">30</p>
+        <i class="fas fa-user" style="font-size: 24px; color: white;"></i>
+      </div>
+      <div class="col-md-3 col-sm-6 stat-box">
+        <h4>Total Contributions</h4>
+        <p id="commits-count" style="color: white;">0</p>
+        <i class="fas fa-users" style="font-size: 24px; color: white;"></i>
+      </div>
+      <div class="col-md-3 col-sm-6 stat-box">
+        <h4>Stars</h4>
+        <p id="stars-count" style="color: white;">0</p>
+        <i class="fas fa-star" style="font-size: 24px; color: white;"></i>
+      </div>
+      <div class="col-md-3 col-sm-6 stat-box">
+        <h4>Forks</h4>
+        <p id="forks-count" style="color: white;">0</p>
+        <i class="fas fa-code-branch" style="font-size: 24px; color: white;"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contributor Cards -->
+  <h1 class="title">Our Contributors ⤵️ ....</h1>
+  <div id="contributors" class="contributors-grid">
+    <!-- Dynamic contributors will be added here by JavaScript -->
+    
+  </div>
+</div>
+
+<!-- Certificate Modal -->
+<div class="modal fade" id="certificateModal" tabindex="-1" aria-labelledby="certificateModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="certificateModalLabel">Contributor Certificate</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <canvas id="certificateCanvas" width="600" height="400"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <a id="downloadCertificate" class="btn btn-primary" download="certificate.png">Download</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+    
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">
+      <i class="fas fa-arrow-up fa-xl"></i>
+    </button>
+
+    <button id="scrollToTopBtn" onclick="scrollToTop()">↑</button>
+    
+    <!-- Footer Section -->
+    <footer class="main-footer">
+    <div class="footer-content">
+    <div class="footer-section">
+      <h3>मातृबोधः</h3>
+      <p>
+        Educating children through India's timeless wisdom and cultural
+        heritage.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Linkedin"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+
+      <!-- GitHub Star Button -->
+      <div class="github-star">
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">
+          <i class="fab fa-github"></i> Star on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#wisdom">About Us</a></li>
+        <li><a href="#content">Our Courses</a></li>
+        <li><a href="#hero">Contact</a></li>
+        <li><a href="pages/contributor.html">Contributor</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Learning Paths <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="countingpage.html">Counting</a></li>
+        <li><a href="#hero">Days</a></li>
+        <li><a href="#hero">Activities</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Newsletter <div class="underline"><span></span></div></h4>
+      <form>
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+      <br>
+      <h4>Contact Us <div class="underline"><span></span></div></h4>
+      <ul class="contact-info">
+        <li>
+          <i class="fas fa-envelope"></i
+          ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
+      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
+        >@Sakthi</a
+      >
+    </p>
+  </div>
+</footer>
+
+    <script
+      src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js"
+      async
+    ></script>
+    <script src="../scrollscript.js"></script>
+    <script src="../audio.js"></script>
+    <!-- JavaScript code to handle the functionality -->
+    <script src="../pages/contributor.js"></script>
+    <!-- Bootstrap's JS for additional functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scroll to Top Button -->
+<script>
+   const scrollButton = document.getElementById('scrollButton');
+const outerCircle = document.querySelector('.outer-circle');
+const arrow = document.querySelector('.arrow');
+
+// Function to handle scroll behavior
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = (scrollTop / scrollHeight) * 360;
+
+    // Show button after scrolling 7-8 lines (~100px)
+    if (scrollTop > 100) {
+        scrollButton.classList.add('visible');
+    } else {
+        scrollButton.classList.remove('visible');
+    }
+
+    // Update the circular progress
+    outerCircle.style.setProperty('--scroll-progress', `${scrollProgress}deg`);
+});
+
+// Scroll-to-top functionality
+scrollButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+
+
+</body>
+</html>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="index.js"></script>
+    <script src="roadmap.js"></script>
+    <script>
+      document.querySelectorAll('.read-more').forEach(button => {
+    button.addEventListener('click', () => {
+        const cardText = button.previousElementSibling;
+        if (cardText.classList.contains('collapsed')) {
+            cardText.classList.remove('collapsed');
+            cardText.classList.add('expanded');
+            button.textContent = "Read Less";
+        } else {
+            cardText.classList.remove('expanded');
+            cardText.classList.add('collapsed');
+            button.textContent = "Read More";
+        }
+    });
+});
+
+    </script>
+
+    <script>
+      const login = document.getElementById("loginlist")
+      const profile = document.getElementById("profilelist")
+      if (localStorage.getItem("token")) {
+        console.log("user logged in")
+        login.style.display = "none"
+        profile.style.display="block"
+      }else{
+        console.log("user not logged in")
+        login.style.display = "block"
+        profile.style.display="none"
+      }
+    </script>
+  </body>
+</html>
