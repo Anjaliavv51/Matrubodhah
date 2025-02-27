@@ -167,7 +167,13 @@ nav {
 .menu-toggle {
     display: none;
 }
-
+.main_content {
+  border-radius: 10px;
+  background-color: #E5A186;
+  color: white;
+  border: none;
+  padding: 6px;
+}
 
 
 /* Hero Section */
