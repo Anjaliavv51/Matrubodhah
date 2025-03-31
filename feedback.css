@@ -66,7 +66,17 @@ html {
 button{
     width: 100px;
     height: 40px;
+    margin-top: 1rem;
+    background-color: #f8bea7;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3sease;
+    
 }
+
 a{
     text-decoration: none;
     color: black;
@@ -76,10 +86,13 @@ a{
    background-color: white;
 }
 button:hover{
-    background-color: #E5A186;
-    color: white;
+    /* background-color: #E5A186; */
+    background-color: #e5a186;
+    border-radius: #e5a186;
+    /* color: white; */
     border: none;
     border-radius: 4px;
+   
 }
 
 /* ========================
