@@ -45,8 +45,8 @@ p{
     overflow: hidden;
     width: 768px;
     max-width: 100%;
-    min-height: 480px;
-
+    min-height: 400px;
+    margin-top: 2rem;
 }
 .form-container form{
     background:#fff;
@@ -86,9 +86,15 @@ button:focus{
     outline: none;
 }
 
+
 button.ghost{
     background:transparent;
     border-color: #fff;
+    margin-top: 1rem;
+    
+}
+button.ghost:hover{
+   border: 0.1rem solid white;
 }
 .form-container{
     position: absolute;
@@ -193,12 +199,19 @@ a{
 .sign-up-button{
 
     background-color:#e5a186;
-    color:#eee;
+    color:#fffefe;;
+}
+.sign-up-button:hover{
+  border: 0.1rem solid black;
 }
 
 .sign-in-button{
 
     background-color:#e5a186;
-    color:#eee;
+    color:#fffefe;
+    
+}
+.sign-in-button:hover{
+    border: 0.1rem solid black;
 }
 

@@ -19,7 +19,7 @@
 
 <body>
   <header>
-    <nav>
+    <nav style="padding: 2px 5%; font-size: larger;">
       <!-- Wrap the logo text in an anchor tag -->
       <a href="#hero" class="logo">मातृबोधः</a>
       <ul class="nav-links">
@@ -45,15 +45,55 @@
       <form action="#">
         <h1>Create Account</h1>
 
+    <header>
+        <nav>
+            <!-- Wrap the logo text in an anchor tag -->
+            <a href="#hero" class="logo">मातृबोधः</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#wisdom">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Content</a>
+                    <ul class="dropdown-content">
+                        <li><a href="countingpage.html">Counting</a></li>
+                        <li><a href="#">Days</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="Vedic_Facts.html">VedicFacts</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html" >Contact</a></li>
+            </ul>
+            <div class="toggle-menu">☰</div>
+        </nav>
+    </header>
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Create Account</h1>
+                
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <p>By creating account, you agree with the <a href="terms.html" class="click">Terms and conditions</a></p>
+                <button class="sign-up-button">Sign Up</button>
+
         <input type="text" placeholder="Name">
         <input type="email" placeholder="Email">
         <input type="password" placeholder="Password">
         <p>By creating account, you agree with the <a href="terms.html" class="click">Terms and conditions</a></p>
-        <button class="sign-up-button">Sign Up</button>
+
+              <button class="sign-up-button">Sign Up</button>
+        <div style="height: 2rem;">
+          <button class="sign-up-button">Sign Up</button>
+         </div>
+        
 
       </form>
 
     </div>
+  
     <div class="form-container sign-in-container">
       <form action="#">
         <h1>Sign In</h1>
@@ -62,10 +102,13 @@
         <input type="password" placeholder="Password">
 
         <a href="Forgotpassword.html"><span class="click">Forgot your password?</span></a>
-        <button>Sign In</button>
+        
 
         <a href="#">Forgot your password?<span class="click">Click here</span></a>
-        <button class="sign-in-button">Sign In</button>
+        <div style="height: 2rem;">
+          <button class="sign-in-button">Sign In</button>
+         </div>
+       
 
       </form>
 
@@ -77,13 +120,16 @@
           <p>
             To keep connected with us please login with your personal info
           </p>
-          <button class="ghost" id="signIn">Sign In</button>
+          <div style="height: 2rem;">
+            <button class="ghost btn-sign" id="signIn">Sign In</button>
+           </div>
         </div>
         <div class="overlay-panel overlay-right">
           <h1>Hello, Friend!</h1>
-          <p>Enter your personal details and start journey with us</p>
-          <button class="ghost" id="signUp">Sign Up</button>
-
+          <p >Enter your personal details and start journey with us</p>
+         <div style="height: 2rem;">
+          <button class="ghost btn-sign" id="signUp">Sign Up</button>
+         </div>
         </div>
       </div>
 

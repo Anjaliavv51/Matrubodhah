@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="DALL·E 2024-08-28 12.19.31 - A clean and moderately detailed logo for a Sanskrit education website. T.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मातृबोधः</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="stylesheet" href="scontentcss.css">
+    <link rel="stylesheet" href="footercss.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body{
+            background-image: url('image.png');
+            background-attachment: fixed;
+        }
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+            margin-top: 150px;
+        }
+        .image-container {
+            margin: 10px;
+            border: 2px solid rgba(128, 128, 128, 0.5);
+            box-shadow: 0 0 10px rgba(128, 128, 128, 0.5);
+            overflow: hidden;
+            height: 300px;
+            width: 400px;
+            border-radius: 10px;
+        }
+        .image-container img {
+            width: 400px;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            border-radius: 10px;
+        }
+        /*Animation sliders*/
+        .wrapper{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .wrapper1{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container{
+            height: 400px;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: start;
+        }
+        .card{
+            width: 80px;
+            border-radius: .75rem;
+            background-size: cover;
+            cursor: pointer;
+            overflow: hidden;
+            border-radius: 2rem;
+            margin: 0 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            transition: .6s cubic-bezier(.28,-0.03,0,.99);
+            box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8);
+        }
+        .card > .row{
+            color: white;
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .card > .row > .icon{
+            background: #223;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px;
+        }
+        input{
+            display: none;
+        }
+        input:checked+label{
+            width: 700px;
+        }
+        input:checked+label .description{
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+       .card[for="c0"]{
+            background-image: url(Vedic_Facts/F1.jpg);
+        }
+        .card[for="c1"]{
+            background-image: url(Vedic_Facts/F2.jpg);
+        }
+        .card[for="c2"]{
+            background-image: url(Vedic_Facts/F3.jpg);
+        }
+        .card[for="c3"]{
+            background-image: url(Vedic_Facts/F4.jpg);
+        }
+        .card[for="c4"]{
+            background-image: url(Vedic_Facts/F5.jpg);
+            
+        }
+        .card[for="c5"]{
+
+            background-image: url(Vedic_Facts/F6.jpg);
+        }
+        .card[for="c6"]{
+            background-image: url(Vedic_Facts/F7.jpg);
+        }
+        .card[for="c7"]{
+            background-image: url(Vedic_Facts/F8.jpg);
+        }
+        
+    </style>
+
+</head>
+<body>
+    <!-- Scroll -->
+    <div id="scrollButton" class="hidden">
+        <div class="outer-circle">
+            <div class="inner-circle">
+                <div class="arrow">↑</div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">मातृबोधः</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#wisdom">About</a></li>
+                <li class="dropdown">
+                    <a href="#">Content</a>
+                    <ul class="dropdown-content">
+                        <li><a href="countingpage.html">Counting</a></li>
+                        <li><a href="#">Days</a></li>
+                        <li><a href="activities.html">Activities</a></li>
+                        <li><a href="Vedic_Facts.html">VedicFacts</a></li>
+                        <li><a href="feedback.html">Feedback</a></li>
+                    </ul>
+                </li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="toggle-menu">☰</div>
+        </nav>
+    </header>
+
+
+
+    <div class="wrapper">
+        <div class="container">
+           <input type="radio" name="slide" id="c0">
+            <label for="c0" class="card">
+                <div class="row">
+                    <div class="icon">0</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c1">
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon">1</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon">2</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c3" checked>
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon">3</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon">4</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c5">
+            <label for="c5" class="card">
+                <div class="row">
+                    <div class="icon">5</div>
+                </div>
+            </label>
+        </div>
+    </div>
+    <div class="wrapper1">
+        <div class="container">
+            <input type="radio" name="slide" id="c6">
+            <label for="c6" class="card">
+                <div class="row">
+                    <div class="icon">6</div>
+                </div>
+            </label>
+            <input type="radio" name="slide" id="c7">
+            <label for="c7" class="card">
+                <div class="row">
+                    <div class="icon">7</div>
+                </div>
+                   </div>
+    </div>
+
+
+<!-- Updated Footer Section --> 
+<footer class="main-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3>मातृबोधः</h3>
+      <p>
+        Educating children through India's timeless wisdom and cultural
+        heritage.
+      </p>
+      <div class="social-links">
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fab fa-facebook"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fab fa-twitter"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="YouTube"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <a
+          href="https://github.com/Anjaliavv51/Matrubodhah"
+          target="_blank"
+          aria-label="Linkedin"
+          ><i class="fa-brands fa-linkedin-in"></i
+        ></a>
+      </div>
+
+      <!-- GitHub Star Button -->
+      <div class="github-star">
+        <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank">
+          <i class="fab fa-github"></i> Star on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#wisdom">About Us</a></li>
+        <li><a href="#content">Our Courses</a></li>
+        <li><a href="#hero">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Learning Paths <div class="underline"><span></span></div></h4>
+      <ul>
+        <li><a href="countingpage.html">Counting</a></li>
+        <li><a href="#hero">Days</a></li>
+        <li><a href="#hero">Activities</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Newsletter <div class="underline"><span></span></div></h4>
+      <form>
+        <i class="fas fa-envelope"></i>
+        <input type="email" placeholder="Enter your email id" required>
+        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+      </form>
+      <br>
+      <h4>Contact Us <div class="underline"><span></span></div></h4>
+      <ul class="contact-info">
+        <li>
+          <i class="fas fa-envelope"></i
+          ><a href="mailto:info@matrubodhah.edu">info@matrubodhah.edu</a>
+        </li>
+        <li><i class="fas fa-map-marker-alt"></i><span>India</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>
+      &copy; 2024 मातृबोधः. Made with <span class="heart">❤️</span> by
+      <a href="https://github.com/Anjaliavv51/Matrubodhah" target="_blank"
+        >@Sakthi</a>
+    </p>
+  </div>
+</footer>
+
+      <script
+      src="//code.tidio.co/5w3m6cpl10rvqjkkmhv1nx8p0fqloyq6.js"
+      async>
+     </script>
+    <script src="scrollscript.js"></script>
+    <script src="audio.js"></script>
+    <!-- Scroll to Top Button -->
+    <script>
+        const scrollButton = document.getElementById('scrollButton');
+        const outerCircle = document.querySelector('.outer-circle');
+        const arrow = document.querySelector('.arrow');
+    // Function to handle scroll behavior
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = (scrollTop / scrollHeight) * 360;
+   // Show button after scrolling 7-8 lines (~100px)
+            if (scrollTop > 100) {
+                scrollButton.classList.add('visible');
+            } else {
+                scrollButton.classList.remove('visible');
+            }
+            // Update the circular progress
+            outerCircle.style.setProperty('--scroll-progress', `${scrollProgress}deg`);
+        });
+        // Scroll-to-top functionality
+        scrollButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+</script>
+<script src="index.js"></script>
+    
+</body>
+</html>
